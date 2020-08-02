@@ -30,15 +30,11 @@ In this section, a step by step series of process will show you how to set up a 
 **STEP1**
 - Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing PHP and MySQL.
 
-```
-Give the example
-```
+> After the installer is downloaded from official website, you can run the installer as an administrator. 
 
-And repeat
+In some cases, alert windows may pop up to inform you that an antivirus software is running, or an activated User Account Control (UAC) may restrict some functions of XAMPP. It is fine to ignore these alerts and continue the installation process.
 
-```
-until finished
-```
+![Image of Yaktocat](https://drive.google.com/file/d/1-x3Ye76hNDNk3wdPjXTPamHEXccDRs1q/view?usp=sharing)
 
 End with an example of getting some data out of the system or using it for a little demo
 
