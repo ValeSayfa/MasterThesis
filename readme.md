@@ -1,8 +1,8 @@
 # A Meta-Approach to guide Architectural Refactoring from Monolithic Applications to Microservices
 
-> A web-based tool for assisting the developers to guide their architectural refactoring process based on specific scenarios.
-
 > This is the Master Thesis of Qiwen Gu, a student of INFOTECH, University of Stuttgart, Germany.
+
+> A web-based tool for assisting the developers to guide their architectural refactoring process based on specific scenarios.
 
 > Terms: micro-services, monolithic migration, architectural refactoring, web demo
 
@@ -13,10 +13,14 @@ The following instructions will enable you to build a local environment for deve
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+In order to use and rest the web-based tool, the following prerequisites should be fulfilled, and detailed set up processes are illustrated in "Installing" section.
 
 ```
-Give examples
+- Windows Operation System
+- A web browser
+- PHP scripting language for web development
+- MySQL Database
+- Apache HTTP Server
 ```
 
 ### Installing
@@ -67,26 +71,6 @@ Add additional notes about how to deploy this on a live system
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
+## Author
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* **Qiwen Gu** - *Initial work* - University of Stuttgart
