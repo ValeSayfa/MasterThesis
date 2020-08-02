@@ -9,7 +9,7 @@
 
 ## Getting Started
 
-The following instructions will enable you to build a local environment for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The following instructions will enable you to build a local environment for development and running purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
@@ -25,9 +25,10 @@ In order to use and rest the web-based tool, the following prerequisites should 
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
 
-Say what the step will be
+**STEP1**
+- Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing PHP and MySQL.
 
 ```
 Give the example
