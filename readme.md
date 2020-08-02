@@ -1,6 +1,11 @@
 # A Meta-Approach to guide Architectural Refactoring from Monolithic Applications to Microservices
 
-This is the Master Thesis of Qiwen Gu, a web demo tool for assisting the developers to guide their architectural refactoring process based on specific scenarios
+> A web-based tool for assisting the developers to guide their architectural refactoring process based on specific scenarios.
+
+> This is the Master Thesis of Qiwen Gu, a student of INFOTECH, University of Stuttgart, Germany.
+
+> Terms: micro-services, monolithic migration, architectural refactoring, web demo
+
 
 ## Getting Started
 
