@@ -66,7 +66,8 @@ You can start the installed XAMPP Control Panel and you can see many action butt
     - Solution: Click "Config" button for Apache module, select "Apache (httpd.conf)" file and open with Notepad. Next, search "Listen" in the file, and you can change the port to another free port and avoid conflict.
 
 ***Change Apache listening port***
-![ApachePort](https://user-images.githubusercontent.com/29103893/89134888-0a376780-d529-11ea-9a3e-fbc6d21c899f.png)
+![ApachePort](https://user-images.githubusercontent.com/29103893/89135035-8e3e1f00-d52a-11ea-880b-a9bff41f7ccb.png)
+
 
 
 ## Running the tests
