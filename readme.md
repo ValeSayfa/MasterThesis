@@ -46,6 +46,29 @@ Then, a installation folder is selected, and it is recommand to use the default 
 
 Finally, click "Next" button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
+**STEP2**
+> Start Apache and MySQL module in the XAMPP Control Panel
+
+You can start the installed XAMPP Control Panel and you can see many action buttons for different modules. Here, we can start Apache and MySQL module by clicking "Start" button for each module.Then you can see the activated modules and their connecting ports.
+
+***XAMPP Control Panel***
+![XAMPP3](https://user-images.githubusercontent.com/29103893/89134659-f1c64d80-d526-11ea-8edc-2a4623d56a34.png)
+
+**If there are errors encountered during the starting process of Apache, the possible reasons may be as following.**
+
+1. The service is not yet started.
+    - Solution: Run "Services" as administrator on Windows, find Apache (Here "Apache2.4") and click "Start" to start the service.
+
+***Start Apache service***
+![Service](https://user-images.githubusercontent.com/29103893/89134839-a319b300-d528-11ea-877e-c59e7d99f111.png)
+
+2. The port is occupied by other applciations.
+    - Solution: Click "Config" button for Apache module, select "Apache (httpd.conf)" file and open with Notepad. Next, search "Listen" in the file, and you can change the port to another free port and avoid conflict.
+
+***Apache listening port changing***
+![ApachePort](https://user-images.githubusercontent.com/29103893/89134888-0a376780-d529-11ea-9a3e-fbc6d21c899f.png)
+
+
 ## Running the tests
 
 Explain how to run the automated tests for this system
