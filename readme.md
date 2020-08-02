@@ -39,9 +39,12 @@ In next step, you can select the components to install. In this case, Apache, My
 _Necessary components in XAMPP installation_
 ![XAMPP1](https://user-images.githubusercontent.com/29103893/89133462-4ca67780-d51c-11ea-8b79-d520ebbf6a29.png)
 
+Then, a installation folder is selected, and it is recommand to use the default folder in system disk to avoid user authorization problems in the future.
+
 _Installation folder for XAMPP_
 ![XAMPP2](https://user-images.githubusercontent.com/29103893/89133653-ede1fd80-d51d-11ea-82ec-4e74126cbaa8.png)
 
+Finally, click "Next" button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
 ## Running the tests
 
