@@ -75,7 +75,7 @@ function showResultArray($resultArray)
 function generateContent($resultArray)
 {
     for ($count = 0; $count < count($resultArray); $count++) {
-        echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td>" . $resultArray[$count]["Score"] . "</td><td><del>" . $resultArray[$count]["MisMatch"] . "</del></td><td>" . $resultArray[$count]["MatchScore"] . "</td></tr>";
+        echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td><div class=\"float-right\">" . $resultArray[$count]["Score"] . "/5</div></td><td><del>" . $resultArray[$count]["MisMatch"] . "</del></td><td><div class=\"float-right\">" . $resultArray[$count]["MatchScore"] . "%</div></td></tr>";
     }
 }
 
@@ -724,7 +724,7 @@ function set_matchScore($inputObject, $row, $searchMode)
     return number_format((($countSelectedAttributes - $misMatch) / $countSelectedAttributes * 5 + $row["Score"]) * 10, 2, '.', ''); //Match score function
 }
 
-//Match string gerneration
+//MisMatch string gerneration
 function set_misMatch($inputObject, $row, $searchMode)
 {
 
@@ -801,8 +801,18 @@ function set_misMatch($inputObject, $row, $searchMode)
             $misMatchString .= "Dynamic Microservice Composition; ";
         }
     }
-    if ($inputObject->get_applicability() !== $row["Applicability"]) {
-        $misMatchString .= $inputObject->get_applicability() . "; ";
+    if ($inputObject->get_applicability() != "GRMO") { //Applicability have specific value
+        $applicability = $inputObject->get_applicability();
+        if ($applicability != "") {
+            if ($applicability == "MO" && $row["Applicability"] == "GR") {
+                $misMatchString .= "GR" . "; ";
+            }
+            if ($applicability == "GR" && $row["Applicability"] == "MO") {
+                $misMatchString .= "MO" . "; ";
+            }
+        } else {
+            $misMatchString .= $row["Applicability"] . "; ";
+        }
     }
     if ($inputObject->get_sourceCode() == 1) {
         if ($row["Input_SourceCode"] != 1) {
