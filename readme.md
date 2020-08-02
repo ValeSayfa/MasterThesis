@@ -37,11 +37,13 @@ In some cases, alert windows may pop up to inform you that an antivirus software
 In next step, you can select the components to install. In this case, Apache, MySQL, PHP and phpMyAdmin are included as mindesten components in order to build a complete running environment.
 
 ***Necessary components in XAMPP installation***
+
 ![XAMPP1](https://user-images.githubusercontent.com/29103893/89133462-4ca67780-d51c-11ea-8b79-d520ebbf6a29.png)
 
 Then, a installation folder is selected, and it is recommand to use the default folder in system disk to avoid user authorization problems in the future.
 
-***Installation folder for XAMPP***
+***Select installation folder for XAMPP***
+
 ![XAMPP2](https://user-images.githubusercontent.com/29103893/89133653-ede1fd80-d51d-11ea-82ec-4e74126cbaa8.png)
 
 Finally, click "Next" button until the installation and configuration processes are finished. And the running environment is successfully set up.
@@ -52,6 +54,7 @@ Finally, click "Next" button until the installation and configuration processes 
 You can start the installed XAMPP Control Panel and you can see many action buttons for different modules. Here, we can start Apache and MySQL module by clicking "Start" button for each module.Then you can see the activated modules and their connecting ports.
 
 ***XAMPP Control Panel***
+
 ![XAMPP3](https://user-images.githubusercontent.com/29103893/89134659-f1c64d80-d526-11ea-8edc-2a4623d56a34.png)
 
 **If there are errors encountered during the starting process of Apache, the possible reasons may be as following:**
@@ -60,12 +63,14 @@ You can start the installed XAMPP Control Panel and you can see many action butt
     - Solution: Run "Services" as administrator on Windows, find Apache (Here "Apache2.4") and click "Start" to start the service.
 
 ***Start Apache service***
+
 ![Service](https://user-images.githubusercontent.com/29103893/89134839-a319b300-d528-11ea-877e-c59e7d99f111.png)
 
 2. The port is occupied by other applications.
     - Solution: Click "Config" button for Apache module, select "Apache (httpd.conf)" file and open with Notepad. Next, search "Listen" in the file, and you can change the port to another free port and avoid conflict.
 
 ***Change Apache listening port***
+
 ![ApachePort](https://user-images.githubusercontent.com/29103893/89135035-8e3e1f00-d52a-11ea-880b-a9bff41f7ccb.png)
 
 
