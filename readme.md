@@ -15,13 +15,13 @@ The following instructions will enable you to build a local environment for deve
 
 In order to use and rest the web-based tool, the following prerequisites should be fulfilled, and detailed set up processes are illustrated in "Installing" section.
 
-```
+
 - Windows Operation System
 - A web browser
 - PHP scripting language for web development
 - MySQL Database
 - Apache HTTP Server
-```
+
 
 ### Installing
 
