@@ -34,7 +34,8 @@ In this section, a step by step series of process will show you how to set up a 
 
 In some cases, alert windows may pop up to inform you that an antivirus software is running, or an activated User Account Control (UAC) may restrict some functions of XAMPP. It is fine to ignore these alerts and continue the installation process.
 
-![Image of Yaktocat](https://drive.google.com/file/d/1-x3Ye76hNDNk3wdPjXTPamHEXccDRs1q/view?usp=sharing)
+![XAMPP1](https://user-images.githubusercontent.com/29103893/89133462-4ca67780-d51c-11ea-8b79-d520ebbf6a29.png)
+
 
 End with an example of getting some data out of the system or using it for a little demo
 
