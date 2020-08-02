@@ -28,7 +28,7 @@ In order to use and rest the web-based tool, the following prerequisites should 
 In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
 
 **STEP1**
-- Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing PHP and MySQL.
+> Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing PHP and MySQL.
 
 After the installer is downloaded from official website, you can run the installer as an administrator. 
 
