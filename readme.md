@@ -28,13 +28,13 @@ In order to use and rest the web-based tool, the following prerequisites should 
 In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
 
 **STEP1**
-> Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing PHP and MySQL.
+> Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing *PHP* and *MySQL*.
 
 After the installer is downloaded from official website, you can run the installer as an administrator. 
 
-In some cases, alert windows may pop up to inform you that an antivirus software is running, or an activated User Account Control (UAC) may restrict some functions of XAMPP. It is fine to ignore these alerts and continue the installation process.
+In some cases, alert windows may pop up to inform you that an antivirus software is running, or an activated User Account Control (UAC) may restrict some functions of *XAMPP*. It is fine to ignore these alerts and continue the installation process.
 
-In next step, you can select the components to install. In this case, Apache, MySQL, PHP and phpMyAdmin are included as mindesten components in order to build a complete running environment.
+In next step, you can select the components to install. In this case, *Apache*, *MySQL*, *PHP* and *phpMyAdmin* are included as mindesten components in order to build a complete running environment.
 
 ***Necessary components in XAMPP installation***
 
@@ -49,31 +49,35 @@ Then, a installation folder is selected, and it is recommand to use the default 
 Finally, click "Next" button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
 **STEP2**
-> Start Apache and MySQL module in the XAMPP Control Panel
+> Start *Apache* and *MySQL* module in the *XAMPP* Control Panel
 
-You can start the installed XAMPP Control Panel and you can see many action buttons for different modules. Here, we can start Apache and MySQL module by clicking "Start" button for each module.Then you can see the activated modules and their connecting ports.
+You can start the installed *XAMPP* Control Panel and you can see many action buttons for different modules. Here, we can start *Apache* and *MySQL* module by clicking "Start" button for each module.Then you can see the activated modules and their connecting ports.
 
 ***XAMPP Control Panel***
 
 ![XAMPP3](https://user-images.githubusercontent.com/29103893/89134659-f1c64d80-d526-11ea-8edc-2a4623d56a34.png)
 
-**If there are errors encountered during the starting process of Apache, the possible reasons may be as following:**
+**If there are errors encountered during the starting process of *Apache*, the possible reasons may be as following:**
 
 1. The service is not yet started.
-    - Solution: Run "Services" as administrator on Windows, find Apache (Here "Apache2.4") and click "Start" to start the service.
+    - Solution: Run "Services" as administrator on Windows, find *Apache* (Here "Apache2.4") and click "Start" to start the service.
 
 ***Start Apache service***
 
 ![Service](https://user-images.githubusercontent.com/29103893/89134839-a319b300-d528-11ea-877e-c59e7d99f111.png)
 
 2. The port is occupied by other applications.
-    - Solution: Click "Config" button for Apache module, select "Apache (httpd.conf)" file and open with Notepad. Next, search "Listen" in the file, and you can change the port to another free port and avoid conflict.
+    - Solution: Click "Config" button for *Apache* module, select "Apache (httpd.conf)" file and open with Notepad. Next, search "Listen" in the file, and you can change the port to another free port and avoid conflict.
 
 ***Change Apache listening port***
 
 ![ApachePort](https://user-images.githubusercontent.com/29103893/89135035-8e3e1f00-d52a-11ea-880b-a9bff41f7ccb.png)
 
+**STEP3**
+> Import "migration.sql" schema and data into *MySQL*.
 
+The "migration.sql" is a database which contains a table called "contribution". It includes both schema and data.
+The *XAMPP*  
 
 ## Running the tests
 
