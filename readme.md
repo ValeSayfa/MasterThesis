@@ -30,7 +30,7 @@ In this section, a step by step series of process will show you how to set up a 
 **STEP1**
 - Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing PHP and MySQL.
 
-> After the installer is downloaded from official website, you can run the installer as an administrator. 
+After the installer is downloaded from official website, you can run the installer as an administrator. 
 
 In some cases, alert windows may pop up to inform you that an antivirus software is running, or an activated User Account Control (UAC) may restrict some functions of XAMPP. It is fine to ignore these alerts and continue the installation process.
 
@@ -39,8 +39,9 @@ In next step, you can select the components to install. In this case, Apache, My
 _Necessary components in XAMPP installation_
 ![XAMPP1](https://user-images.githubusercontent.com/29103893/89133462-4ca67780-d51c-11ea-8b79-d520ebbf6a29.png)
 
+_Installation folder for XAMPP_
+![XAMPP2](https://user-images.githubusercontent.com/29103893/89133653-ede1fd80-d51d-11ea-82ec-4e74126cbaa8.png)
 
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
