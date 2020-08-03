@@ -179,9 +179,9 @@ If you click one title in the result list, the web brower will open a new window
 
 ## Built With
 
-* [XAMPP](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Visual Studio Code](https://maven.apache.org/) - Dependency Management
-* [Chrome](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [XAMPP](https://www.apachefriends.org/index.html) - The web-based tool ruuning environmrnt
+* [Visual Studio Code](https://code.visualstudio.com/) - Source-code editor 
+* [Chrome](https://www.google.com/chrome/?brand=CHBD&gclid=Cj0KCQjwyJn5BRDrARIsADZ9ykHCKujWcNXmaQzeCPtaS7HZ5ra_rfDjd27cd-XSw8oqtWR3QiDLRdoaAkvoEALw_wcB&gclsrc=aw.ds) - Used to run the web-based tool
 
 
 ---
