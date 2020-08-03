@@ -11,10 +11,10 @@
 
 The following instructions will enable you to build a local environment for development and running purposes. See deployment for notes on how to deploy the project on a live system.
 
+
 ### Prerequisites
 
 In order to use and rest the web-based tool, the following prerequisites should be fulfilled, and detailed set up processes are illustrated in "Installing" section.
-
 
 - Windows Operation System
 - A web browser
@@ -28,6 +28,7 @@ In order to use and rest the web-based tool, the following prerequisites should 
 In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
 
 **STEP1**
+
 > Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing *PHP* and *MySQL*.
 
 After the installer is downloaded from official website, you can run the installer as an administrator. 
@@ -49,6 +50,7 @@ Then, a installation folder is selected, and it is recommand to use the default 
 Finally, click "Next" button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
 **STEP2**
+
 > Start *Apache* and *MySQL* module in the *XAMPP Control Panel*
 
 You can start the installed *XAMPP Control Panel* and you can see many action buttons for different modules. Here, we can start *Apache* and *MySQL* module by clicking "Start" button for each module.Then you can see the activated modules and their connecting ports.
@@ -74,6 +76,7 @@ You can start the installed *XAMPP Control Panel* and you can see many action bu
 ![ApachePort](https://user-images.githubusercontent.com/29103893/89135035-8e3e1f00-d52a-11ea-880b-a9bff41f7ccb.png)
 
 **STEP3**
+
 > Import "migration.sql" schema and data into *MySQL*.
 
 The "migration.sql" is a database which contains a table called "contribution". It includes both schema and data.
@@ -84,16 +87,21 @@ In the *phpMyAdmin* page, you can click "Import" section, and choose the local s
 **Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
 
 - The sql file is encoded witha different coding format.
-    - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with phpMyAdmin setting (Here "utf8mb4_general_ci" is used).
+    - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with *phpMyAdmin* setting (Here *"utf8mb4_general_ci"* is used).
 
 ***Import sql file to MySQL server***
 
 ![phpMyAdm](https://user-images.githubusercontent.com/29103893/89135613-01499480-d52f-11ea-9309-7bef5f9ad57f.png)
 
+**STEP4**
 
-## Running the tests
+> Put the project folder into *XAMPP* htdocs folder
 
-Explain how to run the automated tests for this system
+In order to make the code files runnable in local environment, the project folder should be places in *XAMPP* htdocs folder (Here "C:\xampp\htdocs"). *XAMPP* treat this folder as local host and its code file is accessable by web browser. Specificly, the *php* code as well as *HTML*, *Javascript* can be executed by web broswer and they act as a web application locally, enabling us to test and use the web based tool eaily and intuitively.
+
+## Running the web-based tool
+
+In this section, the introduction about the basic functions of web-based tool is introduced.
 
 ### Break down into end to end tests
 
