@@ -23,7 +23,6 @@
     - [Open the Search Page](#Open-the-Search-Page)
     - [Open the Result Page](#Open-the-Result-Page)
 - [Built With](#Built-With)
-- [FAQ](#faq)
 - [Author](#Author)
 
 
@@ -159,11 +158,6 @@ The *"Score"* indicates the quality of each contribution result and *"Recommand"
 ***Search page***
 
 ![Search](https://user-images.githubusercontent.com/29103893/89138502-1c6ed100-d53c-11ea-90f3-692d16ba4028.png)
-
-
-In index page, you can select radio button for each property, and decide whether to include this property or not. you can also exclude or leave it as neutral. 
-
-After selection, you can click *"Search"* button to perform searching. Additionally, you can read all migration approachs by clicking *"Show All"* button. And you are also allowed to select nothing and search, and the web-based tool will provide you an default search result.
 
 
 ### Open the Result Page
