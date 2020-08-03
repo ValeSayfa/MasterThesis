@@ -80,6 +80,7 @@ You can start the installed *XAMPP Control Panel* and you can see many action bu
 > Import "migration.sql" schema and data into *MySQL*.
 
 The "migration.sql" is a database which contains a table called "contribution". It includes both schema and data.
+
 The *XAMPP* contains *phpMyAdmin*, which is a free and open source administration tool for *MySQL*. You can click "Admin" button for *MySQL* module in *XAMPP Control Panel*, and use it with a web browser.
 
 In the *phpMyAdmin* page, you can click "Import" section, and choose the local sql file to import the data into MySQL.
@@ -95,29 +96,30 @@ In the *phpMyAdmin* page, you can click "Import" section, and choose the local s
 
 **STEP4**
 
-> Put the project folder into *XAMPP* htdocs folder
+> Put the project (repository) folder into *XAMPP* htdocs folder
 
-In order to make the code files runnable in local environment, the project folder should be places in *XAMPP* htdocs folder (Here "C:\xampp\htdocs"). *XAMPP* treat this folder as local host and its code file is accessable by web browser. Specificly, the *php* code as well as *HTML*, *Javascript* can be executed by web broswer and they act as a web application locally, enabling us to test and use the web based tool eaily and intuitively.
+In order to make the code files runnable in local environment, the project (repository) folder should be places in *XAMPP* htdocs folder (Here "C:\xampp\htdocs"). *XAMPP* treat this folder as local host and its code file is accessable by web browser. Specificly, the *php* code as well as *HTML*, *Javascript* can be executed by web broswer and they act as a web application locally, enabling us to test and use the web based tool eaily and intuitively.
 
 ## Running the web-based tool
 
 In this section, the introduction about the basic functions of web-based tool is introduced.
 
-### Break down into end to end tests
+### Open the Index Page
 
-Explain what these tests test and why
+First, open the web browser (e.g. Chrome) and input the following URL:
 
 ```
-Give an example
+http://localhost/MasterThesis/index.php
 ```
+As mentioned before, "localhost" indicates "C:\xampp\htdocs", and "MasterThesis" here is the project (repository) name, while "index.php" is the php file containing scripts and html page, which should be run as a web page in the web browser.
+
+
 
 ### And coding style tests
 
 Explain what these tests test and why
 
-```
-Give an example
-```
+
 
 
 ## Built With
