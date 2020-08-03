@@ -75,7 +75,7 @@ function showResultArray($resultArray)
 function generateContent($resultArray)
 {
     for ($count = 0; $count < count($resultArray); $count++) {
-        echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td><div class=\"float-right\">" . $resultArray[$count]["Score"] . "/5</div></td><td><del>" . $resultArray[$count]["MisMatch"] . "</del></td><td><div class=\"float-right\">" . $resultArray[$count]["MatchScore"] . "%</div></td></tr>";
+        echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td>" . $resultArray[$count]["Score"] . "</td><td><del>" . $resultArray[$count]["MisMatch"] . "</del></td><td>" . $resultArray[$count]["MatchScore"] . "</td></tr>";
     }
 }
 

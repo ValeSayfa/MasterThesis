@@ -77,13 +77,13 @@
               Author
             </th>
             <th>
-              Score
+              Score(/5)
             </th>
             <th>
               Missing String
             </th>
             <th>
-              Recommand
+              Recommand(%)
             </th>
           </tr>
         </thead>

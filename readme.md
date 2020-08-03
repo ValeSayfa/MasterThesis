@@ -102,7 +102,9 @@ In order to make the code files runnable in local environment, the project (repo
 
 ## Running the web-based tool
 
-In this section, the introduction about the basic functions of web-based tool is introduced.
+In this section, the introduction about the use of web-based tool is introduced.
+
+The web-based tool enable users to select different properties and search for guidlines to choice refactoring techniques and approachs based on their specific system.
 
 ### Open the Index Page
 
@@ -113,7 +115,21 @@ http://localhost/MasterThesis/index.php
 ```
 As mentioned before, "localhost" indicates "C:\xampp\htdocs", and "MasterThesis" here is the project (repository) name, while "index.php" is the php file containing scripts and html page, which should be run as a web page in the web browser.
 
+***Index page***
 
+![Index](https://user-images.githubusercontent.com/29103893/89137277-e4658f00-d537-11ea-9b33-1b6939a106a1.png)
+
+In index page, you can select radio button for each property, and decide whether to include this property or not. you can also exclude or leave it as neutral. 
+
+After selection, you can click "Search" button to perform searching. Additionally, you can read all migration approachs by clicking "Show All" button. And you are also allowed to select nothing and search, and the web-based tool will provide you an default search result.
+
+***Search page***
+
+![Index](https://user-images.githubusercontent.com/29103893/89137277-e4658f00-d537-11ea-9b33-1b6939a106a1.png)
+
+In index page, you can select radio button for each property, and decide whether to include this property or not. you can also exclude or leave it as neutral. 
+
+After selection, you can click "Search" button to perform searching. Additionally, you can read all migration approachs by clicking "Show All" button. And you are also allowed to select nothing and search, and the web-based tool will provide you an default search result.
 
 ### And coding style tests
 
