@@ -7,6 +7,8 @@
 > Terms: micro-services, monolithic migration, architectural refactoring, web demo
 
 
+---
+
 ## Getting Started
 
 The following instructions will enable you to build a local environment for development and running purposes. See deployment for notes on how to deploy the project on a live system.
@@ -101,6 +103,8 @@ In the *phpMyAdmin* page, you can click "Import" section, and choose the local s
 In order to make the code files runnable in local environment, the project (repository) folder should be places in *XAMPP* htdocs folder (Here "C:\xampp\htdocs"). *XAMPP* treat this folder as local host and its code file is accessable by web browser. Specificly, the *php* code as well as *HTML*, *Javascript* can be executed by web broswer and they act as a web application locally, enabling us to test and use the web based tool eaily and intuitively.
 
 
+---
+
 ## Running the web-based tool
 
 In this section, the introduction about the use of web-based tool is introduced.
@@ -151,12 +155,16 @@ If you click one title in the result list, the web brower will open a new window
 ![Detail](https://user-images.githubusercontent.com/29103893/89139268-74a6d280-d53e-11ea-9176-6d48f975eb1a.png)
 
 
+---
 
 ## Built With
 
 * [XAMPP](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Visual Studio Code](https://maven.apache.org/) - Dependency Management
 * [Chrome](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+
+---
 
 ## Author
 
