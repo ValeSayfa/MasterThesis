@@ -9,6 +9,28 @@
 
 ---
 
+## Table of Contents (Optional)
+
+> If your `README` has a lot of info, section headers might be nice.
+
+- [Getting Started](#Getting-Started)
+    -[Prerequisites](#Prerequisites)
+    -[Installing](#Installing)
+        -[STEP1](#STEP1)
+        -[STEP2](#STEP2)
+        -[STEP3](#STEP3)
+        -[STEP4](#STEP4)
+- [Running the web-based tool](#Running-the-web-based-tool)
+    - [Open the Index Page](#Open-the-Index-Page)
+    - [Open the Search Page](#Open-the-Search-Page)
+    - [Open the Result Page](#Open-the-Result-Page)
+- [Built With](#Built-With)
+- [FAQ](#faq)
+- [Author](#Author)
+
+
+---
+
 ## Getting Started
 
 The following instructions will enable you to build a local environment for development and running purposes. See deployment for notes on how to deploy the project on a live system.
