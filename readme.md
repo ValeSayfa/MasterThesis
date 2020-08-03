@@ -49,9 +49,9 @@ Then, a installation folder is selected, and it is recommand to use the default 
 Finally, click "Next" button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
 **STEP2**
-> Start *Apache* and *MySQL* module in the *XAMPP* Control Panel
+> Start *Apache* and *MySQL* module in the *XAMPP Control Panel*
 
-You can start the installed *XAMPP* Control Panel and you can see many action buttons for different modules. Here, we can start *Apache* and *MySQL* module by clicking "Start" button for each module.Then you can see the activated modules and their connecting ports.
+You can start the installed *XAMPP Control Panel* and you can see many action buttons for different modules. Here, we can start *Apache* and *MySQL* module by clicking "Start" button for each module.Then you can see the activated modules and their connecting ports.
 
 ***XAMPP Control Panel***
 
@@ -77,7 +77,14 @@ You can start the installed *XAMPP* Control Panel and you can see many action bu
 > Import "migration.sql" schema and data into *MySQL*.
 
 The "migration.sql" is a database which contains a table called "contribution". It includes both schema and data.
-The *XAMPP*  
+The *XAMPP* contains *phpMyAdmin*, which is a free and open source administration tool for *MySQL*. You can click "Admin" button for *MySQL* module in *XAMPP Control Panel*, and use it with a web browser.
+
+
+
+***Import sql file to MySQL server***
+
+![phpMyAdm](https://user-images.githubusercontent.com/29103893/89135613-01499480-d52f-11ea-9309-7bef5f9ad57f.png)
+
 
 ## Running the tests
 
@@ -99,15 +106,12 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [XAMPP](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Visual Studio Code](https://maven.apache.org/) - Dependency Management
+* [Chrome](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Author
 
