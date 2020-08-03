@@ -9,17 +9,11 @@
 
 ---
 
-## Table of Contents (Optional)
-
-> If your `README` has a lot of info, section headers might be nice.
+## Table of Contents
 
 - [Getting Started](#Getting-Started)
     -[Prerequisites](#Prerequisites)
     -[Installing](#Installing)
-        -[STEP1](#STEP1)
-        -[STEP2](#STEP2)
-        -[STEP3](#STEP3)
-        -[STEP4](#STEP4)
 - [Running the web-based tool](#Running-the-web-based-tool)
     - [Open the Index Page](#Open-the-Index-Page)
     - [Open the Search Page](#Open-the-Search-Page)
