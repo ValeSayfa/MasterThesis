@@ -79,7 +79,12 @@ You can start the installed *XAMPP Control Panel* and you can see many action bu
 The "migration.sql" is a database which contains a table called "contribution". It includes both schema and data.
 The *XAMPP* contains *phpMyAdmin*, which is a free and open source administration tool for *MySQL*. You can click "Admin" button for *MySQL* module in *XAMPP Control Panel*, and use it with a web browser.
 
+In the *phpMyAdmin* page, you can click "Import" section, and choose the local sql file to import the data into MySQL.
 
+**Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
+
+- The sql file is encoded witha different coding format.
+    - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with phpMyAdmin setting (Here "utf8mb4_general_ci" is used).
 
 ***Import sql file to MySQL server***
 
