@@ -179,7 +179,7 @@ If you click one title in the result list, the web brower will open a new window
 
 ## Built With
 
-* [XAMPP](https://www.apachefriends.org/index.html) - The web-based tool ruuning environmrnt
+* [XAMPP](https://www.apachefriends.org/index.html) - The web-based tool ruuning environment
 * [Visual Studio Code](https://code.visualstudio.com/) - Source-code editor 
 * [Chrome](https://www.google.com/chrome/?brand=CHBD&gclid=Cj0KCQjwyJn5BRDrARIsADZ9ykHCKujWcNXmaQzeCPtaS7HZ5ra_rfDjd27cd-XSw8oqtWR3QiDLRdoaAkvoEALw_wcB&gclsrc=aw.ds) - Used to run the web-based tool
 
