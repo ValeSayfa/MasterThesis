@@ -36,7 +36,7 @@ The following instructions will enable you to build a local environment for deve
 
 ### Prerequisites
 
-In order to use and rest the web-based tool, the following prerequisites should be fulfilled, and detailed set up processes are illustrated in "Installing" section.
+In order to use and rest the web-based tool, the following prerequisites should be fulfilled, and detailed set up processes are illustrated in *"Installing"* section.
 
 - Windows Operation System
 - A web browser
@@ -69,13 +69,13 @@ Then, a installation folder is selected, and it is recommand to use the default 
 
 ![XAMPP2](https://user-images.githubusercontent.com/29103893/89133653-ede1fd80-d51d-11ea-82ec-4e74126cbaa8.png)
 
-Finally, click "Next" button until the installation and configuration processes are finished. And the running environment is successfully set up.
+Finally, click *"Next"* button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
 **STEP2**
 
 > Start *Apache* and *MySQL* module in the *XAMPP Control Panel*
 
-You can start the installed *XAMPP Control Panel* and you can see many action buttons for different modules. Here, we can start *Apache* and *MySQL* module by clicking "Start" button for each module.Then you can see the activated modules and their connecting ports.
+You can start the installed *XAMPP Control Panel* and you can see many action buttons for different modules. Here, we can start *Apache* and *MySQL* module by clicking *"Start"* button for each module.Then you can see the activated modules and their connecting ports.
 
 ***XAMPP Control Panel***
 
@@ -84,14 +84,14 @@ You can start the installed *XAMPP Control Panel* and you can see many action bu
 **If there are errors encountered during the starting process of *Apache*, the possible reasons may be as following:**
 
 1. The service is not yet started.
-    - Solution: Run "Services" as administrator on Windows, find *Apache* (Here "Apache2.4") and click "Start" to start the service.
+    - Solution: Run *"Services"* as administrator on Windows, find *Apache* (Here *"Apache2.4"*) and click *"Start"* to start the service.
 
 ***Start Apache service***
 
 ![Service](https://user-images.githubusercontent.com/29103893/89134839-a319b300-d528-11ea-877e-c59e7d99f111.png)
 
 2. The port is occupied by other applications.
-    - Solution: Click "Config" button for *Apache* module, select "Apache (httpd.conf)" file and open with Notepad. Next, search "Listen" in the file, and you can change the port to another free port and avoid conflict.
+    - Solution: Click *"Config"* button for *Apache* module, select *"Apache (httpd.conf)"* file and open with Notepad. Next, search *"Listen"* in the file, and you can change the port to another free port and avoid conflict.
 
 ***Change Apache listening port***
 
@@ -99,13 +99,13 @@ You can start the installed *XAMPP Control Panel* and you can see many action bu
 
 **STEP3**
 
-> Import "migration.sql" schema and data into *MySQL*.
+> Import *"migration.sql"* schema and data into *MySQL*.
 
-The "migration.sql" is a database which contains a table called "contribution". It includes both schema and data.
+The *"migration.sql"* is a database which contains a table called *"contribution"*. It includes both schema and data.
 
-The *XAMPP* contains *phpMyAdmin*, which is a free and open source administration tool for *MySQL*. You can click "Admin" button for *MySQL* module in *XAMPP Control Panel*, and use it with a web browser.
+The *XAMPP* contains *phpMyAdmin*, which is a free and open source administration tool for *MySQL*. You can click *"Admin"* button for *MySQL* module in *XAMPP Control Panel*, and use it with a web browser.
 
-In the *phpMyAdmin* page, you can click "Import" section, and choose the local sql file to import the data into MySQL.
+In the *phpMyAdmin* page, you can click *"Import"* section, and choose the local sql file to import the data into MySQL.
 
 **Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
 
@@ -120,7 +120,7 @@ In the *phpMyAdmin* page, you can click "Import" section, and choose the local s
 
 > Put the project (repository) folder into *XAMPP* htdocs folder
 
-In order to make the code files runnable in local environment, the project (repository) folder should be places in *XAMPP* htdocs folder (Here "C:\xampp\htdocs"). *XAMPP* treat this folder as local host and its code file is accessable by web browser. Specificly, the *php* code as well as *HTML*, *Javascript* can be executed by web broswer and they act as a web application locally, enabling us to test and use the web based tool eaily and intuitively.
+In order to make the code files runnable in local environment, the project (repository) folder should be places in *XAMPP* htdocs folder (Here *"C:\xampp\htdocs"*). *XAMPP* treat this folder as local host and its code file is accessable by web browser. Specificly, the *php* code as well as *HTML*, *Javascript* can be executed by web broswer and they act as a web application locally, enabling us to test and use the web based tool eaily and intuitively.
 
 
 ---
@@ -139,7 +139,7 @@ First, open the web browser (e.g. Chrome) and input the following URL:
 ```
 http://localhost/MasterThesis/index.php
 ```
-As mentioned before, "localhost" indicates "C:\xampp\htdocs", and "MasterThesis" here is the project (repository) name, while "index.php" is the php file containing scripts and html page, which should be run as a web page in the web browser.
+As mentioned before, *"localhost"* indicates *"C:\xampp\htdocs"*, and *"MasterThesis"* here is the project (repository) name, while *"index.php"* is the php file containing scripts and html page, which should be run as a web page in the web browser.
 
 ***Index page***
 
@@ -147,7 +147,7 @@ As mentioned before, "localhost" indicates "C:\xampp\htdocs", and "MasterThesis"
 
 In index page, you can select radio button for each property, and decide whether to include this property or not. you can also exclude or leave it as neutral. 
 
-After selection, you can click "Search" button to perform searching. Additionally, you can read all migration approachs by clicking "Show All" button. And you are also allowed to select nothing and search, and the web-based tool will provide you an default search result.
+After selection, you can click *"Search"* button to perform searching. Additionally, you can read all migration approachs by clicking *"Show All"* button. And you are also allowed to select nothing and search, and the web-based tool will provide you an default search result.
 
 
 ### Open the Search Page
@@ -163,7 +163,7 @@ The *"Score"* indicates the quality of each contribution result and *"Recommand"
 
 In index page, you can select radio button for each property, and decide whether to include this property or not. you can also exclude or leave it as neutral. 
 
-After selection, you can click "Search" button to perform searching. Additionally, you can read all migration approachs by clicking "Show All" button. And you are also allowed to select nothing and search, and the web-based tool will provide you an default search result.
+After selection, you can click *"Search"* button to perform searching. Additionally, you can read all migration approachs by clicking *"Show All"* button. And you are also allowed to select nothing and search, and the web-based tool will provide you an default search result.
 
 
 ### Open the Result Page
