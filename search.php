@@ -28,7 +28,7 @@
           <h1>
             Search String: <small id="DefaultString"></small>
           </h1>
-          <label id="ShowSearchString"></label>
+          <h3 id="ShowSearchString"></h3>
         </div>
 
         <div class="row" style="margin-top:20px">

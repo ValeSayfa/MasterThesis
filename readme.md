@@ -100,11 +100,13 @@ In the *phpMyAdmin* page, you can click "Import" section, and choose the local s
 
 In order to make the code files runnable in local environment, the project (repository) folder should be places in *XAMPP* htdocs folder (Here "C:\xampp\htdocs"). *XAMPP* treat this folder as local host and its code file is accessable by web browser. Specificly, the *php* code as well as *HTML*, *Javascript* can be executed by web broswer and they act as a web application locally, enabling us to test and use the web based tool eaily and intuitively.
 
+
 ## Running the web-based tool
 
 In this section, the introduction about the use of web-based tool is introduced.
 
 The web-based tool enable users to select different properties and search for guidlines to choice refactoring techniques and approachs based on their specific system.
+
 
 ### Open the Index Page
 
@@ -123,18 +125,30 @@ In index page, you can select radio button for each property, and decide whether
 
 After selection, you can click "Search" button to perform searching. Additionally, you can read all migration approachs by clicking "Show All" button. And you are also allowed to select nothing and search, and the web-based tool will provide you an default search result.
 
+
+### Open the Search Page
+
+After the search is conducted, the index page will refresh and the search page will be shown. The earch page shows the included and excluded properties decided by user, and number of results retrieved from database. The results are listed defaultly in *"Recommand"* order, and you can also change the order according to *"ID"*, *"Year"* or *"Score"*, ascend or descend, by clicking the sorting buttons.
+
+The *"Score"* indicates the quality of each contribution result and *"Recommand"* indicates the degree of matching according to user's input. The result list also shows the missing string, where each contribution doesnot include specfic properties chosen by user.
+
 ***Search page***
 
-![Index](https://user-images.githubusercontent.com/29103893/89137277-e4658f00-d537-11ea-9b33-1b6939a106a1.png)
+![Search](https://user-images.githubusercontent.com/29103893/89138502-1c6ed100-d53c-11ea-90f3-692d16ba4028.png)
+
 
 In index page, you can select radio button for each property, and decide whether to include this property or not. you can also exclude or leave it as neutral. 
 
 After selection, you can click "Search" button to perform searching. Additionally, you can read all migration approachs by clicking "Show All" button. And you are also allowed to select nothing and search, and the web-based tool will provide you an default search result.
 
-### And coding style tests
 
-Explain what these tests test and why
+### Open the Result Page
 
+If you click one title in the result list, the web brower will open a new window and jump to the result page. It will show all information about this specific contribution. You can read the migration approach, including *"Process Strategy"*, *"Decomposition Strategy"*, *"Technique Type"*, etc., and you can also click *"Link to website"* to jump to the origional source website for further information. This page can provide you detailed knowledge about the migration information within its specific scenario, and provide you guidline whether it is also applicablr to your system.
+
+***Result page***
+
+![Detail](https://user-images.githubusercontent.com/29103893/89139268-74a6d280-d53e-11ea-9176-6d48f975eb1a.png)
 
 
 
