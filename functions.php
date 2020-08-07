@@ -1243,7 +1243,7 @@ class searchObject
     }
 
     //Set the Object value to 1 if the user checked "Include" in the index.php
-    function setCheckedValue($name)
+    function set_CheckedValue($name)
     {
         if (isset($_POST[$name]) && $_POST[$name] == "Include") {
             return 1;
@@ -1314,37 +1314,37 @@ class searchObject
     /*Specific Class attributes setter*/
     public function set_process()
     {
-        $this->rewrite = $this->setCheckedValue("Process_Rewrite");
-        $this->extension = $this->setCheckedValue("Process_Extension");
-        $this->stranglerPattern = $this->setCheckedValue("Process_StranglerPattern");
-        $this->continuousEvolution = $this->setCheckedValue("Process_ContinuousEvolution");
-        $this->split = $this->setCheckedValue("Process_Split");
-        $this->processStrategyOthers = $this->setCheckedValue("Process_Others");
+        $this->rewrite = $this->set_CheckedValue("Process_Rewrite");
+        $this->extension = $this->set_CheckedValue("Process_Extension");
+        $this->stranglerPattern = $this->set_CheckedValue("Process_StranglerPattern");
+        $this->continuousEvolution = $this->set_CheckedValue("Process_ContinuousEvolution");
+        $this->split = $this->set_CheckedValue("Process_Split");
+        $this->processStrategyOthers = $this->set_CheckedValue("Process_Others");
     }
 
 
     public function set_decomposition()
     {
-        $this->ddd = $this->setCheckedValue("Decomposition_DDD");
-        $this->functionalDecomposition = $this->setCheckedValue("Decomposition_FunctionalDecomposition");
-        $this->existingStructure = $this->setCheckedValue("Decomposition_ExistingStructure");
-        $this->decompositionStrategyOthers = $this->setCheckedValue("Decomposition_Others");
+        $this->ddd = $this->set_CheckedValue("Decomposition_DDD");
+        $this->functionalDecomposition = $this->set_CheckedValue("Decomposition_FunctionalDecomposition");
+        $this->existingStructure = $this->set_CheckedValue("Decomposition_ExistingStructure");
+        $this->decompositionStrategyOthers = $this->set_CheckedValue("Decomposition_Others");
     }
 
 
     public function set_technique()
     {
-        $this->SCA = $this->setCheckedValue("Technique_SCA");
-        $this->MDA = $this->setCheckedValue("Technique_MDA");
-        $this->WDA = $this->setCheckedValue("Technique_WDA");
-        $this->DMC = $this->setCheckedValue("Technique_DMC");
+        $this->SCA = $this->set_CheckedValue("Technique_SCA");
+        $this->MDA = $this->set_CheckedValue("Technique_MDA");
+        $this->WDA = $this->set_CheckedValue("Technique_WDA");
+        $this->DMC = $this->set_CheckedValue("Technique_DMC");
     }
 
 
     public function set_applicability()
     {
-        $MO = $this->setCheckedValue("MO");
-        $GR = $this->setCheckedValue("GR");
+        $MO = $this->set_CheckedValue("MO");
+        $GR = $this->set_CheckedValue("GR");
         if (($MO == 1 && $GR == 1)) {
             $this->applicability = "GRMO";
         } elseif ($MO == 1 && $GR == 0) {
@@ -1359,38 +1359,38 @@ class searchObject
 
     public function set_input()
     {
-        $this->sourceCode = $this->setCheckedValue("Input_SourceCode");
-        $this->useCase = $this->setCheckedValue("Input_UseCase");
-        $this->systemSpecification = $this->setCheckedValue("Input_SystemSpecification");
-        $this->API = $this->setCheckedValue("Input_API");
-        $this->inputOthers = $this->setCheckedValue("Input_Others");
+        $this->sourceCode = $this->set_CheckedValue("Input_SourceCode");
+        $this->useCase = $this->set_CheckedValue("Input_UseCase");
+        $this->systemSpecification = $this->set_CheckedValue("Input_SystemSpecification");
+        $this->API = $this->set_CheckedValue("Input_API");
+        $this->inputOthers = $this->set_CheckedValue("Input_Others");
     }
 
 
     public function set_output()
     {
-        $this->list = $this->setCheckedValue("Output_List");
-        $this->archi = $this->setCheckedValue("Output_Archi");
-        $this->outputOthers = $this->setCheckedValue("Output_Others");
+        $this->list = $this->set_CheckedValue("Output_List");
+        $this->archi = $this->set_CheckedValue("Output_Archi");
+        $this->outputOthers = $this->set_CheckedValue("Output_Others");
     }
 
 
     public function set_validation()
     {
-        $this->experiment = $this->setCheckedValue("Validation_Experiment");
-        $this->example = $this->setCheckedValue("Validation_Example");
-        $this->caseStudy = $this->setCheckedValue("Validation_CaseStudy");
+        $this->experiment = $this->set_CheckedValue("Validation_Experiment");
+        $this->example = $this->set_CheckedValue("Validation_Example");
+        $this->caseStudy = $this->set_CheckedValue("Validation_CaseStudy");
     }
 
 
     public function set_quality()
     {
-        $this->maintainability = $this->setCheckedValue("Quality_Maintainability");
-        $this->performance = $this->setCheckedValue("Quality_Performance");
-        $this->reliability = $this->setCheckedValue("Quality_Reliability");
-        $this->scalability = $this->setCheckedValue("Quality_Scalability");
-        $this->security = $this->setCheckedValue("Quality_Security");
-        $this->qualityOthers = $this->setCheckedValue("Quality_Others");
+        $this->maintainability = $this->set_CheckedValue("Quality_Maintainability");
+        $this->performance = $this->set_CheckedValue("Quality_Performance");
+        $this->reliability = $this->set_CheckedValue("Quality_Reliability");
+        $this->scalability = $this->set_CheckedValue("Quality_Scalability");
+        $this->security = $this->set_CheckedValue("Quality_Security");
+        $this->qualityOthers = $this->set_CheckedValue("Quality_Others");
     }
 }
 
