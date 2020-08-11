@@ -1001,15 +1001,8 @@
                 </div>
             </div>
         </form>
-
-
-        <!--<div class="row" style="text-align:center">
-                <div class="col-md-3 text-primary"><label onclick="selectAll(4)">select all</label></div>
-                <div class="col-md-3 text-primary"><label onclick="selectAll(5)">select all</label></div>
-                <div class="col-md-3 text-primary"><label onclick="selectAll(6)">select all</label></div>
-                <div class="col-md-3 text-primary"><label onclick="selectAll(7)">select all</label></div>
-            </div>-->
     </div>
+    <!-- obsolescent function
     <script language="JavaScript">
         var processChecked = false;
         var decompositionChecked = false;
@@ -1179,6 +1172,7 @@
             }
         }
     </script>
+    -->
 </body>
 
 </html>

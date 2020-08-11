@@ -1034,12 +1034,10 @@ class searchObject
         return $this->id;
     }
 
-
     public function get_rewrite()
     {
         return $this->rewrite;
     }
-
 
     public function get_extension()
     {
@@ -1051,66 +1049,55 @@ class searchObject
         return $this->stranglerPattern;
     }
 
-
     public function get_continuousEvolution()
     {
         return $this->continuousEvolution;
     }
-
 
     public function get_split()
     {
         return $this->split;
     }
 
-
     public function get_processStrategyOthers()
     {
         return $this->processStrategyOthers;
     }
-
 
     public function get_ddd()
     {
         return $this->ddd;
     }
 
-
     public function get_functionalDecomposition()
     {
         return $this->functionalDecomposition;
     }
-
 
     public function get_existingStructure()
     {
         return $this->existingStructure;
     }
 
-
     public function get_decompositionStrategyOthers()
     {
         return $this->decompositionStrategyOthers;
     }
-
 
     public function get_SCA()
     {
         return $this->SCA;
     }
 
-
     public function get_MDA()
     {
         return $this->MDA;
     }
 
-
     public function get_WDA()
     {
         return $this->WDA;
     }
-
 
     public function get_DMC()
     {
@@ -1122,120 +1109,100 @@ class searchObject
         return $this->applicability;
     }
 
-
     public function get_sourceCode()
     {
         return $this->sourceCode;
     }
-
 
     public function get_useCase()
     {
         return $this->useCase;
     }
 
-
     public function get_systemSpecification()
     {
         return $this->systemSpecification;
     }
-
 
     public function get_API()
     {
         return $this->API;
     }
 
-
     public function get_inputOthers()
     {
         return $this->inputOthers;
     }
-
 
     public function get_list()
     {
         return $this->list;
     }
 
-
     public function get_archi()
     {
         return $this->archi;
     }
-
 
     public function get_outputOthers()
     {
         return $this->outputOthers;
     }
 
-
     public function get_experiment()
     {
         return $this->experiment;
     }
-
 
     public function get_example()
     {
         return $this->example;
     }
 
-
     public function get_caseStudy()
     {
         return $this->caseStudy;
     }
-
 
     public function get_maintainability()
     {
         return $this->maintainability;
     }
 
-
     public function get_performance()
     {
         return $this->performance;
     }
-
 
     public function get_reliability()
     {
         return $this->reliability;
     }
 
-
     public function get_scalability()
     {
         return $this->scalability;
     }
-
 
     public function get_security()
     {
         return $this->security;
     }
 
-
     public function get_qualityOthers()
     {
         return $this->qualityOthers;
     }
-
 
     public function get_score()
     {
         return $this->score;
     }
 
-
     public function get_matchScore()
     {
         return $this->matchScore;
     }
-
 
     public function get_misMatch()
     {
@@ -1310,7 +1277,6 @@ class searchObject
         $this->misMatch = "";
     }
 
-
     /*Specific Class attributes setter*/
     public function set_process()
     {
@@ -1322,7 +1288,6 @@ class searchObject
         $this->processStrategyOthers = $this->set_CheckedValue("Process_Others");
     }
 
-
     public function set_decomposition()
     {
         $this->ddd = $this->set_CheckedValue("Decomposition_DDD");
@@ -1331,7 +1296,6 @@ class searchObject
         $this->decompositionStrategyOthers = $this->set_CheckedValue("Decomposition_Others");
     }
 
-
     public function set_technique()
     {
         $this->SCA = $this->set_CheckedValue("Technique_SCA");
@@ -1339,7 +1303,6 @@ class searchObject
         $this->WDA = $this->set_CheckedValue("Technique_WDA");
         $this->DMC = $this->set_CheckedValue("Technique_DMC");
     }
-
 
     public function set_applicability()
     {
@@ -1356,7 +1319,6 @@ class searchObject
         }
     }
 
-
     public function set_input()
     {
         $this->sourceCode = $this->set_CheckedValue("Input_SourceCode");
@@ -1366,7 +1328,6 @@ class searchObject
         $this->inputOthers = $this->set_CheckedValue("Input_Others");
     }
 
-
     public function set_output()
     {
         $this->list = $this->set_CheckedValue("Output_List");
@@ -1374,14 +1335,12 @@ class searchObject
         $this->outputOthers = $this->set_CheckedValue("Output_Others");
     }
 
-
     public function set_validation()
     {
         $this->experiment = $this->set_CheckedValue("Validation_Experiment");
         $this->example = $this->set_CheckedValue("Validation_Example");
         $this->caseStudy = $this->set_CheckedValue("Validation_CaseStudy");
     }
-
 
     public function set_quality()
     {
@@ -1393,58 +1352,3 @@ class searchObject
         $this->qualityOthers = $this->set_CheckedValue("Quality_Others");
     }
 }
-
-
-/*Sorting algorithm
-function idSort($idAscend, $resultArray)
-{
-    showResultArray($resultArray);
-    if ($idAscend == TRUE) {
-        array_multisort(array_column($resultArray, "id"), SORT_ASC, $resultArray);
-    } else {
-        array_multisort(array_column($resultArray, "id"), SORT_DESC, $resultArray);
-    }
-    gernerateContent($resultArray);
-
-    return !$idAscend;
-}
-
-function yearSort($yearAscend, $resultArray)
-{
-    showResultArray($resultArray);
-    if ($yearAscend == TRUE) {
-        array_multisort(array_column($resultArray, "Year"), SORT_ASC, $resultArray);
-    } else {
-        array_multisort(array_column($resultArray, "Year"), SORT_DESC, $resultArray);
-    }
-    gernerateContent($resultArray);
-
-    return !$yearAscend;
-}
-
-function scoreSort($scoreAscend, $resultArray)
-{
-    showResultArray($resultArray);
-    if ($scoreAscend == TRUE) {
-        array_multisort(array_column($resultArray, "Score"), SORT_ASC, $resultArray);
-    } else {
-        array_multisort(array_column($resultArray, "Score"), SORT_DESC, $resultArray);
-    }
-    gernerateContent($resultArray);
-
-    return !$scoreAscend;
-}
-
-function relevanceSort($relevanceAscend, $resultArray)
-{
-    showResultArray($resultArray);
-    if ($relevanceAscend == TRUE) {
-        array_multisort(array_column($resultArray, "MatchScore"), SORT_ASC, $resultArray);
-    } else {
-        array_multisort(array_column($resultArray, "MatchScore"), SORT_DESC, $resultArray);
-    }
-    gernerateContent($resultArray);
-
-    return !$relevanceAscend;
-}
-*/

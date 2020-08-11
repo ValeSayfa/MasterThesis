@@ -182,4 +182,4 @@ If you click one title in the result list, the web brower will open a new window
 
 ## Author
 
-* **Qiwen Gu** - *Initial work* - University of Stuttgart
+* **Qiwen Gu** - *Initial work* - INFOTECH - University of Stuttgart - Germany

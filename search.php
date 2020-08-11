@@ -106,6 +106,7 @@
             die("Connection failed: " . $conn->connect_error);
           }
 
+          //Call different method by different submit button
           if (isset($_REQUEST['subject'])) {
             # search-buttons were clicked
             switch ($_REQUEST['subject']) {
@@ -135,6 +136,8 @@
     var scoreAscend = true;
     var relevanceAscend = true;
 
+
+    // Sort the result table by mode (column): 0 - sort by id ; 2 - sort by Year ; 4 - sort by Score ; 3 - sort by Relevance;
     function sortTable(mode) {
       switch (mode) {
         case (0): //Sort by id

@@ -103,7 +103,6 @@ if ($result->num_rows > 0) {
                             <td id="DetailApproach" name="DetailApproach">
                                 <!-- php get-->
                                 <?php
-
                                 echo $row["Approach"]; ?>
                             </td>
                         </tr>
@@ -114,7 +113,6 @@ if ($result->num_rows > 0) {
                             <td id="DetailProcessStrategy" name="DetailProcessStrategy">
                                 <!-- php get-->
                                 <?php
-
                                 showProcess($row);
                                 ?>
                             </td>
@@ -127,7 +125,6 @@ if ($result->num_rows > 0) {
                             <td id="DetailDecompositionStrategy" name="DetailDecompositionStrategy">
                                 <!-- php get-->
                                 <?php
-
                                 showDecomposition($row);
                                 ?>
                             </td>
@@ -139,7 +136,6 @@ if ($result->num_rows > 0) {
                                 <td id="DetailTechniqueType" name="DetailTechniqueType">
                                     <!-- php get-->
                                     <?php
-
                                     showTechniqueType($row);
                                     ?>
                                 </td>
@@ -152,7 +148,6 @@ if ($result->num_rows > 0) {
                                 <td id="DetailTechniqueSets" name="DetailTechniqueSets">
                                     <!-- php get-->
                                     <?php
-
                                     echo nl2br($row["TechniqueSet"]); ?>
                                 </td>
                             </tr>
@@ -163,7 +158,6 @@ if ($result->num_rows > 0) {
                                 <td id="DetailApplicability" name="DetailApplicability">
                                     <!-- php get-->
                                     <?php
-
                                     showApplicability($row); ?>
                                 </td>
                             </tr>
@@ -175,7 +169,6 @@ if ($result->num_rows > 0) {
                                 <td id="DetailInput" name="DetailInput">
                                     <!-- php get-->
                                     <?php
-
                                     showInput($row);
                                     ?>
                                 </td>
@@ -187,7 +180,6 @@ if ($result->num_rows > 0) {
                                 <td id="DetailOutput" name="DetailOutput">
                                     <!-- php get-->
                                     <?php
-
                                     showOutput($row);
                                     ?>
                                 </td>
@@ -200,7 +192,6 @@ if ($result->num_rows > 0) {
                                 <td id="DetailAtomic" name="DetailAtomic">
                                     <!-- php get-->
                                     <?php
-
                                     echo nl2br($row["AtomicUnit"]); ?>
                                 </td>
                             </tr>
@@ -211,7 +202,6 @@ if ($result->num_rows > 0) {
                                 <td id="DetailToolSupport" name="DetailToolSupport">
                                     <!-- php get-->
                                     <?php
-
                                     echo nl2br($row["Tool"]); ?>
                                 </td>
                             </tr>
@@ -223,7 +213,6 @@ if ($result->num_rows > 0) {
                                 <td id="DetailValidationType" name="DetailValidationType">
                                     <!-- php get-->
                                     <?php
-
                                     showValidation($row); ?>
                                 </td>
                             </tr>
@@ -234,7 +223,6 @@ if ($result->num_rows > 0) {
                                 <td id="DetailQuality" name="DetailQuality">
                                     <!-- php get-->
                                     <?php
-
                                     showQuality($row); ?>
                                 </td>
                             </tr>
@@ -245,7 +233,6 @@ if ($result->num_rows > 0) {
                                 <td id="Score" name="Score">
                                     <!-- php get-->
                                     <?php
-
                                     echo $row["Score"]; ?>
                                 </td>
                             </tr>
