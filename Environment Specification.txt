@@ -1,6 +1,0 @@
-Environment:
-XAMPP: https://www.apachefriends.org/index.html
-	Version:7.4.8(PHP7.4.8)
-	Include: MySQL, Apache, PHP
-
-WINDOWS: WINDOWS 10 2004
