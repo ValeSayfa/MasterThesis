@@ -124,6 +124,12 @@ In the *phpMyAdmin* page, first a new *"migration"* database should be created b
     - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with *phpMyAdmin* setting (Here *"utf8mb4_general_ci"* is used).
 
 
+Specificly, the database allows a normal user (shown in the red box) to select data from the table. This is the only privilege assigned to the user, which is enough for the application and therefore can prevent data from unintended update. The developer can update, add or delete data using phpMyAdmin administration tool directly with a web browser, having the full privileges for operations.
+
+***User's privilege***
+
+![PrivilegeUser](https://user-images.githubusercontent.com/29103893/90281938-cb30dc80-de6d-11ea-99ff-d0b25ffd8e1a.png)
+
 **STEP4**
 
 > Put the project (repository) folder into *XAMPP* htdocs folder
