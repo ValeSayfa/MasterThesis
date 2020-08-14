@@ -114,15 +114,15 @@ In the *phpMyAdmin* page, first a new *"migration"* database should be created b
 
 ![NewDatabase](https://user-images.githubusercontent.com/29103893/90281540-0aaaf900-de6d-11ea-90ca-666bb59b3240.png)
 
+***Import sql file to MySQL server***
+
+![TableInput](https://user-images.githubusercontent.com/29103893/90281643-37f7a700-de6d-11ea-9ae3-c7d929e62521.png)
 
 **Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
 
 - The sql file is encoded witha different coding format.
     - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with *phpMyAdmin* setting (Here *"utf8mb4_general_ci"* is used).
 
-***Import sql file to MySQL server***
-
-![TableInput](https://user-images.githubusercontent.com/29103893/90281643-37f7a700-de6d-11ea-9ae3-c7d929e62521.png)
 
 **STEP4**
 
