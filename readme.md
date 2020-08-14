@@ -104,6 +104,10 @@ The *"migration.sql"* is a database which contains a table called *"contribution
 
 The *XAMPP* contains *phpMyAdmin*, which is a free and open source administration tool for *MySQL*. You can click *"Admin"* button for *MySQL* module in *XAMPP Control Panel*, and use it with a web browser.
 
+***Open the phpMyAdmin window***
+
+![phpMyAdminWindow](https://user-images.githubusercontent.com/29103893/90280566-6aa0a000-de6b-11ea-9725-adc7bfa9ace5.png)
+
 In the *phpMyAdmin* page, you can click *"Import"* section, and choose the local sql file to import the data into MySQL.
 
 **Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
