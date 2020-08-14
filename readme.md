@@ -140,7 +140,6 @@ If you want to add a new user, you can click *"Add user account"* link in *"Priv
     - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with *phpMyAdmin* setting (Here *"utf8mb4_general_ci"* is used).
 
 
-
 **STEP4**
 
 > Put the project (repository) folder into *XAMPP* htdocs folder
