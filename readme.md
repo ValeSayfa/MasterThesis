@@ -128,11 +128,11 @@ If you want to add a new user, you can click *"Add user account"* link in *"Priv
 
 ***Add a new user***
 
-![userCreation](https://user-images.githubusercontent.com/29103893/90285065-6d06f800-de73-11ea-9ec1-c6e0b11ee751.png)
+![AddUser](https://user-images.githubusercontent.com/29103893/90285060-6a0c0780-de73-11ea-9e3a-ec12c65b0dcf.png)
 
 ***User's setting example***
 
-![AddUser](https://user-images.githubusercontent.com/29103893/90285060-6a0c0780-de73-11ea-9e3a-ec12c65b0dcf.png)
+![userCreation](https://user-images.githubusercontent.com/29103893/90285065-6d06f800-de73-11ea-9ec1-c6e0b11ee751.png)
 
 **Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
 
