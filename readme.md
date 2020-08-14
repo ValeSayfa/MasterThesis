@@ -124,6 +124,16 @@ Specificly, the database allows a normal user (shown in the red box) to select d
 
 ![PrivilegeUser](https://user-images.githubusercontent.com/29103893/90281938-cb30dc80-de6d-11ea-99ff-d0b25ffd8e1a.png)
 
+If you want to add a new user, you can click *"Add user account"* link in *"Privileges"* section. Then you can set user name, host name, password and privileges you want to assign to the new user. The following picture is an example of the existing "user" for this web-based tool.
+
+***Add a new user***
+
+![userCreation](https://user-images.githubusercontent.com/29103893/90285065-6d06f800-de73-11ea-9ec1-c6e0b11ee751.png)
+
+***User's setting example***
+
+![AddUser](https://user-images.githubusercontent.com/29103893/90285060-6a0c0780-de73-11ea-9e3a-ec12c65b0dcf.png)
+
 **Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
 
 - The sql file is encoded witha different coding format.
