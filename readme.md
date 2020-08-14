@@ -108,7 +108,12 @@ The *XAMPP* contains *phpMyAdmin*, which is a free and open source administratio
 
 ![phpMyAdminWindow](https://user-images.githubusercontent.com/29103893/90280566-6aa0a000-de6b-11ea-9725-adc7bfa9ace5.png)
 
-In the *phpMyAdmin* page, you can click *"Import"* section, and choose the local sql file to import the data into MySQL.
+In the *phpMyAdmin* page, first a new *"migration"* database should be created by clicking the *"New"* link on the left. Then, you can click the *"Import"* section, and choose the local *"migration.sql"* file to import the data table *"contributions"* into MySQL.
+
+***Create new migration database***
+
+![NewDatabase](https://user-images.githubusercontent.com/29103893/90281540-0aaaf900-de6d-11ea-90ca-666bb59b3240.png)
+
 
 **Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
 
@@ -117,7 +122,7 @@ In the *phpMyAdmin* page, you can click *"Import"* section, and choose the local
 
 ***Import sql file to MySQL server***
 
-![phpMyAdm](https://user-images.githubusercontent.com/29103893/89135613-01499480-d52f-11ea-9309-7bef5f9ad57f.png)
+![TableInput](https://user-images.githubusercontent.com/29103893/90281643-37f7a700-de6d-11ea-9ae3-c7d929e62521.png)
 
 **STEP4**
 
