@@ -37,7 +37,7 @@
 
             </div>
         </div>
-        <form class="bg-light text-dark" action="search.php" method="post">
+        <form class="bg-light text-dark" method="post">
             <!-- 1st Row -->
             <div class="row" style="padding-top:50px;padding-left:50px;padding-right:50px">
 
@@ -45,12 +45,9 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12" id="Process" name="Process" value="Process">
-                            <h5>
+                            <h5 data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"800"}' title="Strategy for implementing the migration, indicating the detailed approaches during migration">
                                 Process Strategy
                             </h5>
-                            <p>
-                                <em>Strategy for implementing the migration</em>
-                            </p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Rewrite</label>
@@ -212,12 +209,9 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12" id="Decomposition" name="Decomposition" value="Decomposition">
-                            <h5>
+                            <h5 data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"800"}' title="Strategy for decomposing the monolithic application, indicating the methodology for decomposotion">
                                 Decomposition Strategy
                             </h5>
-                            <p>
-                                <em>Strategy for decomposing the monolithic application</em>
-                            </p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Domain-Driven Design</label>
@@ -331,12 +325,9 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12" id="Technique" name="Technique" value="Technique">
-                            <h5>
+                            <h5 data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"800"}' title="Detailed steps applied for migration, indicating the technical steps performed during decomposotion">
                                 Technique Type
                             </h5>
-                            <p>
-                                <em>Detailed steps applied for migration</em>
-                            </p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Static (Code) Analysis</label>
@@ -446,12 +437,9 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12" id="Applicability" name="Applicability" value="Applicability">
-                            <h5>
+                            <h5 data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"800"}' title="Applicable scenario and suitable system structure">
                                 Applicability
                             </h5>
-                            <p>
-                                <em>Applicable scenario and suitable system structure</em>
-                            </p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Microservices Greenfield Development</label>
@@ -460,17 +448,17 @@
                                     <div class="row" id="GR">
                                         <div class="col-md-4">
                                             <label class="radio-inline">
-                                                <input type="radio" name="GR" value="Include"> ✓
+                                                <input type="radio" name="Applicability_GR" value="Include"> ✓
                                             </label>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="radio-inline">
-                                                <input type="radio" name="GR" value="Neutral" checked> ◯
+                                                <input type="radio" name="Applicability_GR" value="Neutral" checked> ◯
                                             </label>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="radio-inline">
-                                                <input type="radio" name="GR" value="Exclude"> ✗
+                                                <input type="radio" name="Applicability_GR" value="Exclude"> ✗
                                             </label>
                                         </div>
                                     </div>
@@ -485,17 +473,17 @@
                                     <div class="row" id="MO">
                                         <div class="col-md-4">
                                             <label class="radio-inline">
-                                                <input type="radio" name="MO" value="Include"> ✓
+                                                <input type="radio" name="Applicability_MO" value="Include"> ✓
                                             </label>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="radio-inline">
-                                                <input type="radio" name="MO" value="Neutral" checked> ◯
+                                                <input type="radio" name="Applicability_MO" value="Neutral" checked> ◯
                                             </label>
                                         </div>
                                         <div class="col-md-4">
                                             <label class="radio-inline">
-                                                <input type="radio" name="MO" value="Exclude"> ✗
+                                                <input type="radio" name="Applicability_MO" value="Exclude"> ✗
                                             </label>
                                         </div>
                                     </div>
@@ -512,12 +500,9 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12" id="Input" name="Input" value="Input">
-                            <h5>
+                            <h5 data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"800"}' title="Avaliable input from the current application, indicating the necessary resources as pre-conditions">
                                 Input
                             </h5>
-                            <p>
-                                <em>Avaliable input from the current application</em>
-                            </p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Source Code</label>
@@ -650,12 +635,9 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12" id="Output" name="Output" value="Output">
-                            <h5>
+                            <h5 data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"800"}' title="Resulting output after migration, indicating the final results after implementing this approach">
                                 Output
                             </h5>
-                            <p>
-                                <em>Applicable output by the approach</em>
-                            </p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Candidate List of Microservices</label>
@@ -742,12 +724,9 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12" id="Validation" name="Validation" value="Validation">
-                            <h5>
+                            <h5 data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"800"}' title="Validation type conducted in the contribution, indicating the reliability and correctness about this specific approach">
                                 Validation Type
                             </h5>
-                            <p>
-                                <em>Included validation type by the approach</em>
-                            </p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Experiment</label>
@@ -822,6 +801,31 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>No Validation</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row" id="Validation_NoValidation">
+                                        <div class="col-md-4">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="Validation_NoValidation" value="Include"> ✓
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="Validation_NoValidation" value="Neutral" checked> ◯
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="Validation_NoValidation" value="Exclude"> ✗
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -830,12 +834,9 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12" id="Quality" name="Quality" value="Quality">
-                            <h5>
+                            <h5 data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"800"}' title="Quality metrics or intension considered by the approach, act as characteristics which is desired by the user">
                                 Quality Metrics/Intension
                             </h5>
-                            <p>
-                                <em>Quality metrics or intension considered by the approach</em>
-                            </p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Maintainability</label>
@@ -993,186 +994,20 @@
 
             <div class="row" style="margin:50px;">
                 <div class="col-md-6">
-                    <input type="submit" class="btn btn-outline-success btn-block btn-lg" name="subject" id="ShowAll" value="ShowAll">
+                    <input type="submit" formtarget="_blank" formaction="showall.php" class="btn btn-outline-success btn-block btn-lg" name="subject" id="ShowAll" value="ShowAll">
                 </div>
 
                 <div class="col-md-6">
-                    <input type="submit" class="btn btn-outline-primary btn-block btn-lg" name="subject" id="Search" value="Search">
+                    <input type="submit" formtarget="_blank" formaction="search.php" class="btn btn-outline-primary btn-block btn-lg" name="subject" id="Search" value="Search">
                 </div>
             </div>
         </form>
     </div>
-    <!-- obsolescent function
-    <script language="JavaScript">
-        var processChecked = false;
-        var decompositionChecked = false;
-        var techniqueChecked = false;
-        var applicabilityChecked = false;
-        var inputChecked = false;
-        var outputChecked = false;
-        var validationChecked = false;
-        var qualityChecked = false;
-
-        function selectAll(checkBoxGroup) {
-            switch (checkBoxGroup) {
-                case 0:
-                    selectProcess();
-                    break;
-                case 1:
-                    selectDecomposition();
-                    break;
-                case 2:
-                    selectTechnique();
-                    break;
-                case 3:
-                    selectApplicability();
-                    break;
-                case 4:
-                    selectInput();
-                    break;
-                case 5:
-                    selectOutput();
-                    break;
-                case 6:
-                    selectValidation();
-                    break;
-                case 7:
-                    selectQuality();
-                    break;
-            }
-        }
-
-        function selectProcess() {
-            if (processChecked == false) {
-                document.getElementById("Rewrite").checked = true;
-                document.getElementById("Extension").checked = true;
-                document.getElementById("StranglerPattern").checked = true;
-                document.getElementById("ContinuousEvolution").checked = true;
-                document.getElementById("Split").checked = true;
-                document.getElementById("ProcessStrategyOthers").checked = true;
-                processChecked = true;
-            } else {
-                document.getElementById("Rewrite").checked = false;
-                document.getElementById("Extension").checked = false;
-                document.getElementById("StranglerPattern").checked = false;
-                document.getElementById("ContinuousEvolution").checked = false;
-                document.getElementById("Split").checked = false;
-                document.getElementById("ProcessStrategyOthers").checked = false;
-                processChecked = false;
-            }
-        }
-
-        function selectDecomposition() {
-            if (decompositionChecked == false) {
-                document.getElementById("DDD").checked = true;
-                document.getElementById("FunctionalDecomposition").checked = true;
-                document.getElementById("ExistingStructure").checked = true;
-                document.getElementById("DecompositionStrategyOthers").checked = true;
-                decompositionChecked = true;
-            } else {
-                document.getElementById("DDD").checked = false;
-                document.getElementById("FunctionalDecomposition").checked = false;
-                document.getElementById("ExistingStructure").checked = false;
-                document.getElementById("DecompositionStrategyOthers").checked = false;
-                decompositionChecked = false;
-            }
-        }
-
-        function selectTechnique() {
-            if (techniqueChecked == false) {
-                document.getElementById("SCA").checked = true;
-                document.getElementById("MDA").checked = true;
-                document.getElementById("WDA").checked = true;
-                document.getElementById("DMC").checked = true;
-                techniqueChecked = true;
-            } else {
-                document.getElementById("SCA").checked = false;
-                document.getElementById("MDA").checked = false;
-                document.getElementById("WDA").checked = false;
-                document.getElementById("DMC").checked = false;
-                techniqueChecked = false;
-            }
-        }
-
-        function selectApplicability() {
-            if (applicabilityChecked == false) {
-                document.getElementById("GR").checked = true;
-                document.getElementById("MO").checked = true;
-                applicabilityChecked = true;
-            } else {
-                document.getElementById("GR").checked = false;
-                document.getElementById("MO").checked = false;
-                applicabilityChecked = false;
-            }
-        }
-
-        function selectInput() {
-            if (inputChecked == false) {
-                document.getElementById("SourceCode").checked = true;
-                document.getElementById("UseCase").checked = true;
-                document.getElementById("SystemSpecification").checked = true;
-                document.getElementById("API").checked = true;
-                document.getElementById("InputOthers").checked = true;
-                inputChecked = true;
-            } else {
-                document.getElementById("SourceCode").checked = false;
-                document.getElementById("UseCase").checked = false;
-                document.getElementById("SystemSpecification").checked = false;
-                document.getElementById("API").checked = false;
-                document.getElementById("InputOthers").checked = false;
-                inputChecked = false;
-            }
-        }
-
-        function selectOutput() {
-            if (outputChecked == false) {
-                document.getElementById("List").checked = true;
-                document.getElementById("Archi").checked = true;
-                document.getElementById("OutputOthers").checked = true;
-                outputChecked = true;
-            } else {
-                document.getElementById("List").checked = false;
-                document.getElementById("Archi").checked = false;
-                document.getElementById("OutputOthers").checked = false;
-                outputChecked = false;
-            }
-        }
-
-        function selectValidation() {
-            if (validationChecked == false) {
-                document.getElementById("Experiment").checked = true;
-                document.getElementById("Example").checked = true;
-                document.getElementById("CaseStudy").checked = true;
-                validationChecked = true;
-            } else {
-                document.getElementById("Experiment").checked = false;
-                document.getElementById("Example").checked = false;
-                document.getElementById("CaseStudy").checked = false;
-                validationChecked = false;
-            }
-        }
-
-        function selectQuality() {
-            if (qualityChecked == false) {
-                document.getElementById("Maintainability").checked = true;
-                document.getElementById("Performance").checked = true;
-                document.getElementById("Reliability").checked = true;
-                document.getElementById("Scalability").checked = true;
-                document.getElementById("Security").checked = true;
-                document.getElementById("QualityOthers").checked = true;
-                qualityChecked = true;
-            } else {
-                document.getElementById("Maintainability").checked = false;
-                document.getElementById("Performance").checked = false;
-                document.getElementById("Reliability").checked = false;
-                document.getElementById("Scalability").checked = false;
-                document.getElementById("Security").checked = false;
-                document.getElementById("QualityOthers").checked = false;
-                qualityChecked = false;
-            }
-        }
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
-    -->
 </body>
 
 </html>

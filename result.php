@@ -140,17 +140,6 @@ if ($result->num_rows > 0) {
                                     ?>
                                 </td>
                             </tr>
-
-                            <tr class="table">
-                                <td>
-                                    <b>Technique Sets</b>
-                                </td>
-                                <td id="DetailTechniqueSets" name="DetailTechniqueSets">
-                                    <!-- php get-->
-                                    <?php
-                                    echo nl2br($row["TechniqueSet"]); ?>
-                                </td>
-                            </tr>
                             <tr class="table">
                                 <td>
                                     <b>Applicability</b>
@@ -161,7 +150,16 @@ if ($result->num_rows > 0) {
                                     showApplicability($row); ?>
                                 </td>
                             </tr>
-
+                            <tr class="table">
+                                <td>
+                                    <b>Technique Sets</b>
+                                </td>
+                                <td id="DetailTechniqueSets" name="DetailTechniqueSets">
+                                    <!-- php get-->
+                                    <?php
+                                    echo nl2br($row["TechniqueSet"]); ?>
+                                </td>
+                            </tr>
                             <tr class="table">
                                 <td>
                                     <b> Input</b>
@@ -184,7 +182,6 @@ if ($result->num_rows > 0) {
                                     ?>
                                 </td>
                             </tr>
-
                             <tr class="table">
                                 <td>
                                     <b>Atomic Unit</b>
@@ -205,7 +202,6 @@ if ($result->num_rows > 0) {
                                     echo nl2br($row["Tool"]); ?>
                                 </td>
                             </tr>
-
                             <tr class="table">
                                 <td>
                                     <b>Validation Type</b>

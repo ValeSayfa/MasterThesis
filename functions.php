@@ -56,7 +56,7 @@ function getData($conn, $sql, $inputObject, $searchMode)
     }
     changeText("ResultCount", "Result list: " . $count . " countribution(s)");
     if ($count != 0) {
-        generateContent($resultArray);
+        generateContent($resultArray, $searchMode);
     }
     return $resultArray;
 }
@@ -72,10 +72,16 @@ function showResultArray($resultArray)
 
 
 //Gernerate table from searched result
-function generateContent($resultArray)
+function generateContent($resultArray, $searchMode)
 {
-    for ($count = 0; $count < count($resultArray); $count++) {
-        echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td>" . $resultArray[$count]["Score"] . "</td><td><del>" . $resultArray[$count]["MisMatch"] . "</del></td><td>" . $resultArray[$count]["MatchScore"] . "</td></tr>";
+    if ($searchMode == 0) { // Show All Page
+        for ($count = 0; $count < count($resultArray); $count++) {
+            echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td>" . $resultArray[$count]["Score"] . "</td></tr>";
+        }
+    } else { // Search Page
+        for ($count = 0; $count < count($resultArray); $count++) {
+            echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td>" . $resultArray[$count]["Score"] . "</td><td><del>" . $resultArray[$count]["MisMatch"] . "</del></td><td>" . $resultArray[$count]["MatchScore"] . "</td></tr>";
+        }
     }
 }
 
@@ -98,8 +104,8 @@ function getIncludedValues()
     $includedValue .= getIncludedValueByName("Technique_MDA");
     $includedValue .= getIncludedValueByName("Technique_WDA");
     $includedValue .= getIncludedValueByName("Technique_DMC");
-    $includedValue .= getIncludedValueByName("GR");
-    $includedValue .= getIncludedValueByName("MO");
+    $includedValue .= getIncludedValueByName("Applicability_GR");
+    $includedValue .= getIncludedValueByName("Applicability_MO");
     $includedValue .= getIncludedValueByName("Input_SourceCode");
     $includedValue .= getIncludedValueByName("Input_UseCase");
     $includedValue .= getIncludedValueByName("Input_SystemSpecification");
@@ -111,6 +117,7 @@ function getIncludedValues()
     $includedValue .= getIncludedValueByName("Validation_Experiment");
     $includedValue .= getIncludedValueByName("Validation_Example");
     $includedValue .= getIncludedValueByName("Validation_CaseStudy");
+    $includedValue .= getIncludedValueByName("Validation_NoValidation");
     $includedValue .= getIncludedValueByName("Quality_Maintainability");
     $includedValue .= getIncludedValueByName("Quality_Performance");
     $includedValue .= getIncludedValueByName("Quality_Reliability");
@@ -149,8 +156,8 @@ function getExcludedValues()
     $excludedValue .= getExcludedValueByName("Technique_MDA");
     $excludedValue .= getExcludedValueByName("Technique_WDA");
     $excludedValue .= getExcludedValueByName("Technique_DMC");
-    $excludedValue .= getExcludedValueByName("GR");
-    $excludedValue .= getExcludedValueByName("MO");
+    $excludedValue .= getExcludedValueByName("Applicability_GR");
+    $excludedValue .= getExcludedValueByName("Applicability_MO");
     $excludedValue .= getExcludedValueByName("Input_SourceCode");
     $excludedValue .= getExcludedValueByName("Input_UseCase");
     $excludedValue .= getExcludedValueByName("Input_SystemSpecification");
@@ -162,6 +169,7 @@ function getExcludedValues()
     $excludedValue .= getExcludedValueByName("Validation_Experiment");
     $excludedValue .= getExcludedValueByName("Validation_Example");
     $excludedValue .= getExcludedValueByName("Validation_CaseStudy");
+    $excludedValue .= getExcludedValueByName("Validation_NoValidation");
     $excludedValue .= getExcludedValueByName("Quality_Maintainability");
     $excludedValue .= getExcludedValueByName("Quality_Performance");
     $excludedValue .= getExcludedValueByName("Quality_Reliability");
@@ -185,7 +193,7 @@ function getExcludedValueByName($name)
 //Get mySQL search string by index.php checkbox value
 function getSearchString()
 {
-    $searchString = " WHERE (Technique_Others = 1 OR Validation_NoValidation =1 OR ";
+    $searchString = " WHERE (Technique_Others = 1 OR ";
 
     $searchString .= getIncludedSearchString();
     $searchString = substr($searchString, 0, strlen($searchString) - 4) . ")"; //delete the last " OR " four characters
@@ -217,6 +225,9 @@ function getExcludedSearchString()
     $searchString .= getExcludedSearchStringbyName("Technique_MDA");
     $searchString .= getExcludedSearchStringbyName("Technique_WDA");
     $searchString .= getExcludedSearchStringbyName("Technique_DMC");
+    $searchString .= getExcludedSearchStringbyName("Applicability_GR");
+    $searchString .= getExcludedSearchStringbyName("Applicability_MO");
+    $searchString .= getExcludedSearchStringbyName("Quality_Others");
     $searchString .= getExcludedSearchStringbyName("Input_SourceCode");
     $searchString .= getExcludedSearchStringbyName("Input_UseCase");
     $searchString .= getExcludedSearchStringbyName("Input_SystemSpecification");
@@ -228,6 +239,7 @@ function getExcludedSearchString()
     $searchString .= getExcludedSearchStringbyName("Validation_Experiment");
     $searchString .= getExcludedSearchStringbyName("Validation_Example");
     $searchString .= getExcludedSearchStringbyName("Validation_CaseStudy");
+    $searchString .= getExcludedSearchStringbyName("Validation_NoValidation");
     $searchString .= getExcludedSearchStringbyName("Quality_Maintainability");
     $searchString .= getExcludedSearchStringbyName("Quality_Performance");
     $searchString .= getExcludedSearchStringbyName("Quality_Reliability");
@@ -271,7 +283,8 @@ function getIncludedSearchString()
     $searchString .= getIncludedSearchStringbyName("Technique_MDA");
     $searchString .= getIncludedSearchStringbyName("Technique_WDA");
     $searchString .= getIncludedSearchStringbyName("Technique_DMC");
-    $searchString .= getApplicabilitySearchString();
+    $searchString .= getIncludedSearchStringbyName("Applicability_GR");
+    $searchString .= getIncludedSearchStringbyName("Applicability_MO");
     $searchString .= getIncludedSearchStringbyName("Input_SourceCode");
     $searchString .= getIncludedSearchStringbyName("Input_UseCase");
     $searchString .= getIncludedSearchStringbyName("Input_SystemSpecification");
@@ -283,6 +296,7 @@ function getIncludedSearchString()
     $searchString .= getIncludedSearchStringbyName("Validation_Experiment");
     $searchString .= getIncludedSearchStringbyName("Validation_Example");
     $searchString .= getIncludedSearchStringbyName("Validation_CaseStudy");
+    $searchString .= getIncludedSearchStringbyName("Validation_NoValidation");
     $searchString .= getIncludedSearchStringbyName("Quality_Maintainability");
     $searchString .= getIncludedSearchStringbyName("Quality_Performance");
     $searchString .= getIncludedSearchStringbyName("Quality_Reliability");
@@ -303,32 +317,6 @@ function getIncludedSearchStringbyName($name)
         $searchString .= $name . "=1 OR ";
     }
     return $searchString;
-}
-
-//Get specific application search string based on selection
-function getApplicabilitySearchString()
-{
-    $applicationSearchString = "";
-
-    $GR = $_POST["GR"];
-    $MO = $_POST["MO"];
-    if ($GR == "Neutral" && $MO == "Neutral") {
-        $applicationSearchString = " Applicability = \"GRMO\" OR ";
-    } elseif ($GR == "Include" && $MO == "Neutral") {
-        $applicationSearchString = " Applicability = \"GR\" OR Applicability = \"GRMO\" OR ";
-    } elseif ($GR == "Neutral" && $MO == "Include") {
-        $applicationSearchString = " Applicability = \"MO\" OR Applicability = \"GRMO\" OR ";
-    } elseif ($GR == "Include" && $MO == "Include") {
-        $applicationSearchString = " Applicability = \"GR\" OR Applicability = \"GRMO\" OR Applicability = \"MO\" OR ";
-    } elseif ($GR == "Exclude" && $MO == "Exclude") {
-        $applicationSearchString = "";
-    } elseif ($GR == "Exclude") {
-        $applicationSearchString = " Applicability = \"MO\" OR ";
-    } elseif ($MO == "Exclude") {
-        $applicationSearchString = " Applicability = \"GR\" OR ";
-    }
-    //echo $applicationSearchString . "</br>";
-    return $applicationSearchString;
 }
 
 
@@ -421,19 +409,16 @@ function showTechniqueType($row)
 }
 function showApplicability($row)
 {
-    switch ($row["Applicability"]) {
-        case "GR":
-            echo "Green-Field Development";
-            break;
-        case "MO":
-            echo "Brown-Field Development";
-            break;
-        case "GRMO":
-            echo "Green-Field Development or Brown-Field Development";
-            break;
-        default:
-            echo "Error: No Matched Type";
+    $data = "";
+
+    if ($row["Applicability_GR"] != 0) {
+        $data = $data . "Green-Field Development; ";
     }
+    if ($row["Applicability_MO"] != 0) {
+        $data = $data . "Monolith Migration; ";
+    }
+
+    echo nl2br($data);
 }
 function showInput($row)
 {
@@ -616,6 +601,18 @@ function set_matchScore($inputObject, $row, $searchMode)
             $misMatch += 1;
         }
     }
+    if ($inputObject->get_GR() == 1) {
+        $countSelectedAttributes += 1;
+        if ($row["Applicability_GR"] != 1) {
+            $misMatch += 1;
+        }
+    }
+    if ($inputObject->get_MO() == 1) {
+        $countSelectedAttributes += 1;
+        if ($row["Applicability_MO"] != 1) {
+            $misMatch += 1;
+        }
+    }
     if ($inputObject->get_sourceCode() == 1) {
         $countSelectedAttributes += 1;
         if ($row["Input_SourceCode"] != 1) {
@@ -679,6 +676,12 @@ function set_matchScore($inputObject, $row, $searchMode)
     if ($inputObject->get_caseStudy() == 1) {
         $countSelectedAttributes += 1;
         if ($row["Validation_CaseStudy"] != 1) {
+            $misMatch += 1;
+        }
+    }
+    if ($inputObject->get_noValidation() == 1) {
+        $countSelectedAttributes += 1;
+        if ($row["Validation_NoValidation"] != 1) {
             $misMatch += 1;
         }
     }
@@ -801,17 +804,14 @@ function set_misMatch($inputObject, $row, $searchMode)
             $misMatchString .= "Dynamic Microservice Composition; ";
         }
     }
-    if ($inputObject->get_applicability() != "GRMO") { //Applicability have specific value
-        $applicability = $inputObject->get_applicability();
-        if ($applicability != "") {
-            if ($applicability == "MO" && $row["Applicability"] == "GR") {
-                $misMatchString .= "GR" . "; ";
-            }
-            if ($applicability == "GR" && $row["Applicability"] == "MO") {
-                $misMatchString .= "MO" . "; ";
-            }
-        } else {
-            $misMatchString .= $row["Applicability"] . "; ";
+    if ($inputObject->get_GR() == 1) {
+        if ($row["Applicability_GR"] != 1) {
+            $misMatchString .= "Green-Field Development; ";
+        }
+    }
+    if ($inputObject->get_MO() == 1) {
+        if ($row["Applicability_MO"] != 1) {
+            $misMatchString .= "Monolith Migration; ";
         }
     }
     if ($inputObject->get_sourceCode() == 1) {
@@ -869,6 +869,11 @@ function set_misMatch($inputObject, $row, $searchMode)
             $misMatchString .= "Case Study; ";
         }
     }
+    if ($inputObject->get_noValidation() == 1) {
+        if ($row["Validation_NoValidation"] != 1) {
+            $misMatchString .= "No Validation; ";
+        }
+    }
     if ($inputObject->get_maintainability() == 1) {
         if ($row["Quality_Maintainability"] != 1) {
             $misMatchString .= "Maintainability; ";
@@ -922,7 +927,8 @@ class searchObject
     private $MDA;
     private $WDA;
     private $DMC;
-    private $applicability;
+    private $GR;
+    private $MO;
     private $sourceCode;
     private $useCase;
     private $systemSpecification;
@@ -934,6 +940,7 @@ class searchObject
     private $experiment;
     private $example;
     private $caseStudy;
+    private $noValidation;
     private $maintainability;
     private $performance;
     private $reliability;
@@ -963,7 +970,8 @@ class searchObject
         $this->MDA = 0;
         $this->WDA = 0;
         $this->DMC = 0;
-        $this->applicability = 'GRMO';
+        $this->GR = 0;
+        $this->MO = 0;
         $this->sourceCode = 0;
         $this->useCase = 0;
         $this->systemSpecification = 0;
@@ -975,6 +983,7 @@ class searchObject
         $this->experiment = 0;
         $this->example = 0;
         $this->caseStudy = 0;
+        $this->noValidation = 0;
         $this->maintainability = 0;
         $this->performance = 0;
         $this->reliability = 0;
@@ -1004,7 +1013,8 @@ class searchObject
         echo $this->MDA;
         echo $this->WDA;
         echo $this->DMC;
-        echo $this->applicability;
+        echo $this->GR;
+        echo $this->MO;
         echo $this->sourceCode;
         echo $this->useCase;
         echo $this->systemSpecification;
@@ -1016,6 +1026,7 @@ class searchObject
         echo $this->experiment;
         echo $this->example;
         echo $this->caseStudy;
+        echo $this->noValidation;
         echo $this->maintainability;
         echo $this->performance;
         echo $this->reliability;
@@ -1104,9 +1115,14 @@ class searchObject
         return $this->DMC;
     }
 
-    public function get_applicability()
+    public function get_GR()
     {
-        return $this->applicability;
+        return $this->GR;
+    }
+
+    public function get_MO()
+    {
+        return $this->MO;
     }
 
     public function get_sourceCode()
@@ -1164,6 +1180,11 @@ class searchObject
         return $this->caseStudy;
     }
 
+    public function get_noValidation()
+    {
+        return $this->noValidation;
+    }
+
     public function get_maintainability()
     {
         return $this->maintainability;
@@ -1217,6 +1238,14 @@ class searchObject
         }
         return 0;
     }
+    //Set the Object value to -1 if the user not checked "Include" in the index.php
+    function set_NotCheckedValue($name)
+    {
+        if (isset($_POST[$name]) && $_POST[$name] == "Exclude") {
+            return -1;
+        }
+        return 0;
+    }
 
     //Specific database object attributes setter
     public function set_dataAttributes($inputObject, $row, $searchMode)
@@ -1236,7 +1265,8 @@ class searchObject
         $this->MDA = $row["Technique_MDA"];
         $this->WDA = $row["Technique_WDA"];
         $this->DMC = $row["Technique_DMC"];
-        $this->applicability = $row["Applicability"];
+        $this->GR = $row["Applicability_GR"];
+        $this->MO = $row["Applicability_MO"];
         $this->sourceCode = $row["Input_SourceCode"];
         $this->useCase = $row["Input_UseCase"];
         $this->systemSpecification = $row["Input_SystemSpecification"];
@@ -1248,6 +1278,7 @@ class searchObject
         $this->experiment = $row["Validation_Experiment"];
         $this->example = $row["Validation_Example"];
         $this->caseStudy = $row["Validation_CaseStudy"];
+        $this->noValidation = $row["Validation_NoValidation"];
         $this->maintainability = $row["Quality_Maintainability"];
         $this->performance = $row["Quality_Performance"];
         $this->reliability = $row["Quality_Reliability"];
@@ -1306,17 +1337,8 @@ class searchObject
 
     public function set_applicability()
     {
-        $MO = $this->set_CheckedValue("MO");
-        $GR = $this->set_CheckedValue("GR");
-        if (($MO == 1 && $GR == 1)) {
-            $this->applicability = "GRMO";
-        } elseif ($MO == 1 && $GR == 0) {
-            $this->applicability = "MO";
-        } elseif ($MO == 0 && $GR == 1) {
-            $this->applicability = "GR";
-        } else {
-            $this->applicability = "";
-        }
+        $this->GR = $this->set_CheckedValue("Applicability_GR");
+        $this->MO = $this->set_CheckedValue("Applicability_MO");
     }
 
     public function set_input()
@@ -1340,6 +1362,7 @@ class searchObject
         $this->experiment = $this->set_CheckedValue("Validation_Experiment");
         $this->example = $this->set_CheckedValue("Validation_Example");
         $this->caseStudy = $this->set_CheckedValue("Validation_CaseStudy");
+        $this->noValidation = $this->set_CheckedValue("Validation_NoValidation");
     }
 
     public function set_quality()
