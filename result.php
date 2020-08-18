@@ -107,6 +107,16 @@ if ($result->num_rows > 0) {
                             </td>
                         </tr>
                         <tr class="table">
+                                <td>
+                                    <b>Programming Language</b>
+                                </td>
+                                <td id="ProgramLanguage" name="ProgramLanguage">
+                                    <!-- php get-->
+                                    <?php
+                                    echo nl2br($row["ProgramLanguage"]); ?>
+                                </td>
+                            </tr>
+                        <tr class="table">
                             <td>
                                 <b>Process Strategy</b>
                             </td>
