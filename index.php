@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-md-12" style="margin-top:50px">
                 <h4>
-                    Please select one or more choices for each section, and click search for the result.
+                    According to your specific characteristics of the monolithic application, please select one or more choices for each section, and click "Search" for the result. You can also click "ShowAll" to see all avaliable documents.
                 </h4></br>
                 <h5>
                     ✓ = Include ◯ = neutral ✗ = Exclude
