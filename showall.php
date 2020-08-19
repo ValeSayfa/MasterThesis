@@ -9,7 +9,7 @@
   <title>Search Result - Microservice Migration Meta-Approach Web-based Tool</title>
 
   <meta name="author" content="QiwenGu">
-
+  <link rel="icon" href="logo.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
