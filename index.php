@@ -30,13 +30,20 @@
             <div class="col-md-12" style="margin-top:50px">
                 <h4>
                     According to your specific requirement and the characteristics of your monolithic application, please select one or more choices for each section, and click "Search" for the result. You can also click "ShowAll" to see all avaliable documents.
-                </h4></br>
-                <h5>
-                    ✓ = Include ◯ = neutral ✗ = Exclude
-                </h5></br>
-
+                </h4>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6" style="margin-top:50px">
+                <h5><a href="https://github.com/TschiwenGu/MasterThesis#Running-the-web-based-tool" target="_blank">Instruction about using this web-based tool</a></h5>
+            </div>
+            <div class="col-md-6" style="margin-top:50px">
+                <h5 style="text-align:right;">
+                    ✓ = Include ◯ = neutral ✗ = Exclude
+                </h5>
+            </div>
+        </div>
+
         <form class="bg-light text-dark" method="post">
             <!-- 1st Row -->
             <div class="row" style="padding-top:50px;padding-left:50px;padding-right:50px">
