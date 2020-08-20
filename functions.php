@@ -20,7 +20,7 @@ function search($conn)
     } elseif ($excludedValue != "") {
         changeText("ShowSearchString", "Exclude: " . $excludedValue);
     } else {
-        changeText("DefaultString", "Default Search");
+        changeText("DefaultString", "Show All by Default Search");
     }
     $searchString = getSearchString();
     $sql = "SELECT * FROM contribution" . $searchString;
@@ -104,6 +104,7 @@ function getIncludedValues()
     $includedValue .= getIncludedValueByName("Technique_MDA");
     $includedValue .= getIncludedValueByName("Technique_WDA");
     $includedValue .= getIncludedValueByName("Technique_DMC");
+    $includedValue .= getIncludedValueByName("Technique_Others");
     $includedValue .= getIncludedValueByName("Applicability_GR");
     $includedValue .= getIncludedValueByName("Applicability_MO");
     $includedValue .= getIncludedValueByName("Input_SourceCode");
@@ -156,6 +157,7 @@ function getExcludedValues()
     $excludedValue .= getExcludedValueByName("Technique_MDA");
     $excludedValue .= getExcludedValueByName("Technique_WDA");
     $excludedValue .= getExcludedValueByName("Technique_DMC");
+    $excludedValue .= getExcludedValueByName("Technique_Others");
     $excludedValue .= getExcludedValueByName("Applicability_GR");
     $excludedValue .= getExcludedValueByName("Applicability_MO");
     $excludedValue .= getExcludedValueByName("Input_SourceCode");
@@ -193,14 +195,21 @@ function getExcludedValueByName($name)
 //Get mySQL search string by index.php checkbox value
 function getSearchString()
 {
-    $searchString = " WHERE (Technique_Others = 1 OR ";
-
-    $searchString .= getIncludedSearchString();
-    $searchString = substr($searchString, 0, strlen($searchString) - 4) . ")"; //delete the last " OR " four characters
-    $excludeString = getExcludedSearchString();
-    if ($excludeString != "") { // Exclude aspects exists    
-        $excludeString = substr($excludeString, 0, strlen($excludeString) - 5); //delete the last " AND " five characters
+    $includedSearchString = getIncludedSearchString();
+    $excludedSearchString = getExcludedSearchString();
+    $searchString ="";
+    if ($includedSearchString != "" && $excludedSearchString !=""){
+        $searchString = " WHERE (".$includedSearchString;
+        $searchString = substr($searchString, 0, strlen($searchString) - 4) . ")"; //delete the last " OR " four characters
+        $excludeString = substr($excludedSearchString, 0, strlen($excludedSearchString) - 5); //delete the last " AND " five characters
         $searchString .= " AND (" . $excludeString . ")"; //add exclude aspects at the end
+    }elseif($includedSearchString != ""){
+        $searchString = " WHERE (".$includedSearchString;
+        $searchString = substr($searchString, 0, strlen($searchString) - 4) . ")"; //delete the last " OR " four characters
+    }elseif($excludedSearchString !=""){
+        $searchString = " WHERE (";
+        $excludeString = substr($excludedSearchString, 0, strlen($excludedSearchString) - 5); //delete the last " AND " five characters
+        $searchString .= $excludeString . ")"; //add exclude aspects at the end
     }
     return $searchString;
 }
@@ -225,6 +234,7 @@ function getExcludedSearchString()
     $searchString .= getExcludedSearchStringbyName("Technique_MDA");
     $searchString .= getExcludedSearchStringbyName("Technique_WDA");
     $searchString .= getExcludedSearchStringbyName("Technique_DMC");
+    $searchString .= getExcludedSearchStringbyName("Technique_Others");
     $searchString .= getExcludedSearchStringbyName("Applicability_GR");
     $searchString .= getExcludedSearchStringbyName("Applicability_MO");
     $searchString .= getExcludedSearchStringbyName("Quality_Others");
@@ -283,6 +293,7 @@ function getIncludedSearchString()
     $searchString .= getIncludedSearchStringbyName("Technique_MDA");
     $searchString .= getIncludedSearchStringbyName("Technique_WDA");
     $searchString .= getIncludedSearchStringbyName("Technique_DMC");
+    $searchString .= getIncludedSearchStringbyName("Technique_Others");
     $searchString .= getIncludedSearchStringbyName("Applicability_GR");
     $searchString .= getIncludedSearchStringbyName("Applicability_MO");
     $searchString .= getIncludedSearchStringbyName("Input_SourceCode");
@@ -394,7 +405,7 @@ function showTechniqueType($row)
         $data = $data . "Meta-Data Aided; ";
     }
     if ($row["Technique_WDA"] != 0) {
-        $data = $data . "Workload-Data Aidede; ";
+        $data = $data . "Workload-Data Aided; ";
     }
     if ($row["Technique_DMC"] != 0) {
         $data = $data . "Dynamic Microservice Composition; ";
@@ -601,6 +612,12 @@ function set_matchScore($inputObject, $row, $searchMode)
             $misMatch += 1;
         }
     }
+    if ($inputObject->get_techniqueOthers() == 1) {
+        $countSelectedAttributes += 1;
+        if ($row["Technique_Others"] != 1) {
+            $misMatch += 1;
+        }
+    }
     if ($inputObject->get_GR() == 1) {
         $countSelectedAttributes += 1;
         if ($row["Applicability_GR"] != 1) {
@@ -804,6 +821,11 @@ function set_misMatch($inputObject, $row, $searchMode)
             $misMatchString .= "Dynamic Microservice Composition; ";
         }
     }
+    if ($inputObject->get_techniqueOthers() == 1) {
+        if ($row["Technique_Others"] != 1) {
+            $misMatchString .= "Other Techniques; ";
+        }
+    }
     if ($inputObject->get_GR() == 1) {
         if ($row["Applicability_GR"] != 1) {
             $misMatchString .= "Green-Field Development; ";
@@ -927,6 +949,7 @@ class searchObject
     private $MDA;
     private $WDA;
     private $DMC;
+    private $techniqueOthers;
     private $GR;
     private $MO;
     private $sourceCode;
@@ -970,6 +993,7 @@ class searchObject
         $this->MDA = 0;
         $this->WDA = 0;
         $this->DMC = 0;
+        $this->techniqueOthers = 0;
         $this->GR = 0;
         $this->MO = 0;
         $this->sourceCode = 0;
@@ -1013,6 +1037,7 @@ class searchObject
         echo $this->MDA;
         echo $this->WDA;
         echo $this->DMC;
+        echo $this->techniqueOthers;
         echo $this->GR;
         echo $this->MO;
         echo $this->sourceCode;
@@ -1113,6 +1138,11 @@ class searchObject
     public function get_DMC()
     {
         return $this->DMC;
+    }
+
+    public function get_techniqueOthers()
+    {
+        return $this->techniqueOthers;
     }
 
     public function get_GR()
@@ -1265,6 +1295,7 @@ class searchObject
         $this->MDA = $row["Technique_MDA"];
         $this->WDA = $row["Technique_WDA"];
         $this->DMC = $row["Technique_DMC"];
+        $this->techniqueOthers  = $row["Technique_Others"];
         $this->GR = $row["Applicability_GR"];
         $this->MO = $row["Applicability_MO"];
         $this->sourceCode = $row["Input_SourceCode"];
@@ -1333,6 +1364,7 @@ class searchObject
         $this->MDA = $this->set_CheckedValue("Technique_MDA");
         $this->WDA = $this->set_CheckedValue("Technique_WDA");
         $this->DMC = $this->set_CheckedValue("Technique_DMC");
+        $this->techniqueOthers  = $this->set_CheckedValue("Technique_Others");
     }
 
     public function set_applicability()

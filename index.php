@@ -411,7 +411,6 @@
                                 </div>
                             </div>
 
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Dynamic Microservice Composition</label>
@@ -431,6 +430,31 @@
                                         <div class="col-md-4">
                                             <label class="radio-inline">
                                                 <input type="radio" name="Technique_DMC" value="Exclude"> ✗
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Other Techniques</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row" id="Technique_DMC">
+                                        <div class="col-md-4">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="Technique_Others" value="Include"> ✓
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="Technique_Others" value="Neutral" checked> ◯
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="Technique_Others" value="Exclude"> ✗
                                             </label>
                                         </div>
                                     </div>

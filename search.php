@@ -83,7 +83,7 @@
               Missing String
             </th>
             <th>
-              Recommandation(%)
+              Recommendation(%)
             </th>
           </tr>
         </thead>
@@ -114,8 +114,8 @@
                 $resultArray = showAll($conn);
                 break;
               case 'Search':*/
-                $resultArray = search($conn);
-                /*break;
+            $resultArray = search($conn);
+            /*break;
             }*/
           }
           $conn->close();
@@ -132,4 +132,5 @@
     });
   </script>
 </body>
+
 </html>
