@@ -39,7 +39,7 @@
             </div>
             <div class="col-md-6" style="margin-top:50px">
                 <h5 style="text-align:right;">
-                    ✓ = Include ◯ = neutral ✗ = Exclude
+                    ✓ = Include ◯ = Neutral ✗ = Exclude
                 </h5>
             </div>
         </div>
