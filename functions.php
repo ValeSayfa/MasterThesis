@@ -54,7 +54,7 @@ function getData($conn, $sql, $inputObject, $searchMode)
             $count += 1;
         }
     }
-    changeText("ResultCount", "Result list: " . $count . " countribution(s)");
+    changeText("ResultCount", "Result list: " . $count . " contribution(s)");
     if ($count != 0) {
         generateContent($resultArray, $searchMode);
     }
