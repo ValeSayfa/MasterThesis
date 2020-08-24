@@ -28,14 +28,16 @@
         </div>
         <div class="row">
             <div class="col-md-12" style="margin-top:50px">
-                <h4>
+                <h5>
+                This is a web-based tool aims at providing a guideline to software architects during their decision making about microservice migration and help them choose a suitable approach.
+                
                     According to your specific requirement and the characteristics of your monolithic application, please select one or more choices for each section, and click "Search" for the result. You can also click "ShowAll" to see all avaliable documents.
-                </h4>
+                </h5>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6" style="margin-top:50px">
-                <h5><a href="https://github.com/TschiwenGu/MasterThesis#Running-the-web-based-tool" target="_blank">Instruction about using this web-based tool</a></h5>
+                <h5><a href="https://github.com/TschiwenGu/MasterThesis#Running-the-web-based-tool" target="_blank">Instructions for using this tool</a></h5>
             </div>
             <div class="col-md-6" style="margin-top:50px">
                 <h5 style="text-align:right;">
