@@ -1,11 +1,10 @@
 var idAscend = true;
 var yearAscend = true;
-var scoreAscend = true;
 var relevanceAscend = true;
 
 
-// Sort the result table by mode (column): 0 - sort by id ; 2 - sort by Year ; 4 - sort by Score ; 3 - sort by Relevance;
-function sortTable(page, mode) {
+// Sort the result table by mode (column): 0 - sort by id ; 2 - sort by Year ; 5 - sort by Score ; 3 - sort by Relevance;
+function sortTable(mode) {
     switch (mode) {
         case (0): //Sort by id
             sort(0, idAscend);
@@ -13,25 +12,14 @@ function sortTable(page, mode) {
             break;
         case (2): //Sort by Year
             sort(0, true); //reset table by sorting by id ascend
-            if (page == 1) {//sort in search.php
-                sort(6, false); //higer relevant conreibution have higher priority
-            }else{//sort in showall.php
-                sort(4, false); //higer relevant conreibution have higher score
-            }
+            sort(5, false); //higer relevant contribution have higher priority
             sort(2, yearAscend);
             yearAscend = !yearAscend;
             break;
-        case (4): //Sort by Score
+        
+        case (5): //Sort by Relevance
             sort(0, true); //reset table by sorting by id ascend
-            if (page == 1) {//sort in search.php
-                sort(6, false); //higer relevant conreibution have higher priority
-            }
-            sort(4, scoreAscend);
-            scoreAscend = !scoreAscend;
-            break;
-        case (6): //Sort by Relevance
-            sort(0, true); //reset table by sorting by id ascend
-            sort(6, relevanceAscend);
+            sort(5, relevanceAscend);
             relevanceAscend = !relevanceAscend;
             break;
     }

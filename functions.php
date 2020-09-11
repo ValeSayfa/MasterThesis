@@ -1,12 +1,4 @@
 <?php
-//Get all data from database
-function showAll($conn)
-{
-    changeText("DefaultString", "Show All Result");
-    $sql = "SELECT * FROM contribution";
-    return getData($conn, $sql, 0, 0);
-}
-
 
 //Search specific data from database by conditions
 function search($conn)
@@ -24,15 +16,21 @@ function search($conn)
     }
     $searchString = getSearchString();
     $sql = "SELECT * FROM contribution" . $searchString;
-    //echo $sql;
     $inputObject = new searchObject();
     $inputObject->set_attributes();
-    return getData($conn, $sql, $inputObject, 1);
+    return getData($conn, $sql, $inputObject);
+}
+
+function searchExluded($conn)
+{
+    $searchString = getSearchString();
+    $sql = "SELECT * FROM contribution ct WHERE ct.id NOT IN ( SELECT id FROM contribution" . $searchString.")";
+    return getExcludedData($conn, $sql);
 }
 
 
-//Search data by SQL sentence and show data in html, include searchObject for result matching
-function getData($conn, $sql, $inputObject, $searchMode)
+//Search matching data by SQL sentence and show data in html
+function getData($conn, $sql, $inputObject)
 {
     $result = $conn->query($sql);
     $resultArray = array();
@@ -42,7 +40,7 @@ function getData($conn, $sql, $inputObject, $searchMode)
         //Get all data row by row, pass attribute of "id" by URL to detail page
         while ($row = $result->fetch_assoc()) {
             $rowElement = new searchObject();
-            $rowElement->set_dataAttributes($inputObject, $row, $searchMode);
+            $rowElement->set_dataAttributes($inputObject, $row);
             $resultArray[$count] = array();
             $resultArray[$count]["id"] = $row["id"];
             $resultArray[$count]["Title"] =  $row["Title"];
@@ -54,9 +52,37 @@ function getData($conn, $sql, $inputObject, $searchMode)
             $count += 1;
         }
     }
-    changeText("ResultCount", "Result list: " . $count . " contribution(s)");
+    changeText("ResultCount", "Result list: " . $count. " contribution(s)");
     if ($count != 0) {
-        generateContent($resultArray, $searchMode);
+        generateContent($resultArray);
+    }
+    
+    return $resultArray;
+}
+
+//Search excluded data by SQL sentence and show data in html
+function getExcludedData($conn, $sql)
+{
+    $result = $conn->query($sql);
+    $resultArray = array();
+    $count = 0; // No. of contribution in the list (for toggling row color)
+    //echo $result->num_rows . "results<br>";
+    if ($result->num_rows > 0) {
+        //Get all data row by row, pass attribute of "id" by URL to detail page
+        while ($row = $result->fetch_assoc()) {
+
+            $resultArray[$count] = array();
+            $resultArray[$count]["id"] = $row["id"];
+            $resultArray[$count]["Title"] =  $row["Title"];
+            $resultArray[$count]["Year"] = $row["Year"];
+            $resultArray[$count]["Authors"] =  $row["Authors"];
+            $resultArray[$count]["Score"] =  $row["Score"];
+
+            $count += 1;
+        }
+    }
+    if ($count != 0) {
+        generateExcludedContent($resultArray);
     }
     return $resultArray;
 }
@@ -72,19 +98,22 @@ function showResultArray($resultArray)
 
 
 //Gernerate table from searched result
-function generateContent($resultArray, $searchMode)
+function generateContent($resultArray)
 {
-    if ($searchMode == 0) { // Show All Page
         for ($count = 0; $count < count($resultArray); $count++) {
-            echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td>" . $resultArray[$count]["Score"] . "</td></tr>";
+            echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td><del>" . $resultArray[$count]["MisMatch"] . "</del></td><td>" . $resultArray[$count]["MatchScore"] . "</td></tr>";
         }
-    } else { // Search Page
-        for ($count = 0; $count < count($resultArray); $count++) {
-            echo "<tr name=\"content\" id=\"" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td><td>" . $resultArray[$count]["Score"] . "</td><td><del>" . $resultArray[$count]["MisMatch"] . "</del></td><td>" . $resultArray[$count]["MatchScore"] . "</td></tr>";
-        }
-    }
+    
 }
 
+function generateExcludedContent($resultArray){
+
+    echo "<div class=\"row\" style=\"padding-left:30px ; padding-right:30px\"><div class=\"col-md-12\"><table class=\"table table-bordered\"><thead class=\"thead-light\"><tr class=\"table-success\"><th>#</th><th>Title</th><th>Year</th><th>Author</th></tr></thead><tbody>";
+    for ($count = 0; $count < count($resultArray); $count++) {
+        echo "<tr class=\"text-secondary\" name=\"content\" id=\"exclude" . $resultArray[$count]["id"] . "\" ><td>" . $resultArray[$count]["id"] . "</td><td><a class=\"text-dark\" href=\"result.php?id=" . $resultArray[$count]["id"] . "\"  target=\"_blank\">" . $resultArray[$count]["Title"] . "</td><td>" . $resultArray[$count]["Year"] . "</td><td>" . $resultArray[$count]["Authors"] . "</td></tr>";
+    }
+    changeText("ExcludedCount", "Excluded list: " . count($resultArray) . " contribution(s)");
+}
 
 //Get all index.php include value
 function getIncludedValues()
@@ -523,9 +552,8 @@ function showQuality($row)
 }
 
 //Match score calculation
-function set_matchScore($inputObject, $row, $searchMode)
+function set_matchScore($inputObject, $row)
 {
-    if ($searchMode == 0) return number_format($row["Score"] * 20, 2, '.', '');
     $countSelectedAttributes = 0;
     $misMatch = 0;
     if ($inputObject->get_rewrite() == 1) {
@@ -745,10 +773,9 @@ function set_matchScore($inputObject, $row, $searchMode)
 }
 
 //MisMatch string gerneration
-function set_misMatch($inputObject, $row, $searchMode)
+function set_misMatch($inputObject, $row)
 {
 
-    if ($searchMode == 0) return "";
     $misMatchString = "";
 
     if ($inputObject->get_rewrite() == 1) {
@@ -1278,7 +1305,7 @@ class searchObject
     }
 
     //Specific database object attributes setter
-    public function set_dataAttributes($inputObject, $row, $searchMode)
+    public function set_dataAttributes($inputObject, $row)
     {
         $this->id = $row["id"];
         $this->rewrite = $row["Process_Rewrite"];
@@ -1317,8 +1344,8 @@ class searchObject
         $this->security = $row["Quality_Security"];
         $this->qualityOthers = $row["Quality_Others"];
         $this->score = $row["Score"];
-        $this->matchScore = set_matchScore($inputObject, $row, $searchMode);
-        $this->misMatch = set_misMatch($inputObject, $row, $searchMode);
+        $this->matchScore = set_matchScore($inputObject, $row);
+        $this->misMatch = set_misMatch($inputObject, $row);
     }
 
 

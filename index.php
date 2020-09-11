@@ -1026,13 +1026,15 @@
 
 
             <div class="row" style="margin:50px;">
-                <div class="col-md-6">
-                    <input type="submit" formtarget="_blank" formaction="showall.php" class="btn btn-outline-success btn-block btn-lg" name="subject" id="ShowAll" value="ShowAll">
-                </div>
 
                 <div class="col-md-6">
                     <input type="submit" formtarget="_blank" formaction="search.php" class="btn btn-outline-primary btn-block btn-lg" name="subject" id="Search" value="Search">
                 </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-outline-danger btn-block btn-lg" name="Reset" id="Reset" value="Reset" onClick="window.location.reload();">Reset</button>
+                </div>
+
+               
             </div>
         </form>
     </div>
