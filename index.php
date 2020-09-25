@@ -868,7 +868,7 @@
                     <div class="row">
                         <div class="col-md-12" id="Quality" name="Quality" value="Quality">
                             <h5 data-toggle="tooltip" data-placement="bottom" data-delay='{"show":"800"}' title="Quality metrics or intension considered by the approach, act as characteristics which is desired by the user">
-                                Quality Metrics/Intension
+                                Quality Metrics/Intention
                             </h5>
                             <div class="row">
                                 <div class="col-md-6">

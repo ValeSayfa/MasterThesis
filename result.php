@@ -224,7 +224,7 @@ if ($result->num_rows > 0) {
                             </tr>
                             <tr class="table">
                                 <td>
-                                    <b>Quality Metrics / Intension</b>
+                                    <b>Quality Metrics / Intention</b>
                                 </td>
                                 <td id="DetailQuality" name="DetailQuality">
                                     <!-- php get-->
