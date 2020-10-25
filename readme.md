@@ -163,15 +163,12 @@ In this section, a option to deploy the completed web-based tool on **Microsoft 
 
 > Register or log in <a href="https://azure.microsoft.com/en-us/free/search/?&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&OCID=AID2100049_SEM_Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&dclid=CjkKEQjwxNT8BRC0-4WyzuGUi5IBEiQATZzD3E5IQQApxjufn-ZaV9hVVK_WAVsEtvBT2t2vox1HY3vw_wcB" target="_blank">**Microsoft Azure**</a>,  a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.
 
-After the installer is downloaded from official website, you can run the installer as an administrator. 
+After log in , you can create a new resource for the web based tool and online database.
 
-In some cases, alert windows may pop up to inform you that an antivirus software is running, or an activated User Account Control (UAC) may restrict some functions of *XAMPP*. It is fine to ignore these alerts and continue the installation process.
+***Resource and Service creation***
 
-In next step, you can select the components to install. In this case, *Apache*, *MySQL*, *PHP* and *phpMyAdmin* are included as mindesten components in order to build a complete running environment.
+![AzureHome](https://user-images.githubusercontent.com/29103893/97110590-48809500-16da-11eb-8a86-0d132fab63b3.png)
 
-***Necessary components in XAMPP installation***
-
-![XAMPP1](https://user-images.githubusercontent.com/29103893/89133462-4ca67780-d51c-11ea-8b79-d520ebbf6a29.png)
 
 Then, a installation folder is selected, and it is recommand to use the default folder in system disk to avoid user authorization problems in the future.
 
