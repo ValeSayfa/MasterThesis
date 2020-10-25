@@ -13,12 +13,12 @@
 
 - [Getting Started](#Getting-Started)
     - [Prerequisites](#Prerequisites)
-    - [Installing on Local Machine](#Installing-on-Local-Machine)
+- [Installing on Local Machine](#Installing-on-Local-Machine)
         - [STEP1](#STEP1)
         - [STEP2](#STEP2)
         - [STEP3](#STEP3)
         - [STEP4](#STEP4)
-    - [Deployment on Microsoft Azure](#Deployment-on-Microsoft-Azure)
+- [Deployment on Microsoft Azure](#Deployment-on-Microsoft-Azure)
         - [STEP1](#STEP1)
         - [STEP2](#STEP2)
         - [STEP3](#STEP3)
@@ -49,7 +49,7 @@ In order to use and rest the web-based tool, the following prerequisites should 
 - Apache HTTP Server
 
 
-### Installing on Local Machine
+## Installing on Local Machine
 
 In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
 
@@ -151,7 +151,10 @@ If you want to add a new user, you can click *"Add user account"* link in *"Priv
 
 In order to make the code files runnable in local environment, the project (repository) folder should be places in *XAMPP* htdocs folder (Here *"C:\xampp\htdocs"*). *XAMPP* treat this folder as local host and its code file is accessible by web browser. Specifically, the *php* code as well as *HTML*, *Javascript* can be executed by web browser and they act as a web application locally, enabling us to test and use the web based tool early and intuitively.
 
-### Deployment on Microsoft Azure
+
+
+
+## Deployment on Microsoft Azure
 
 
 
@@ -163,7 +166,7 @@ In this section, a option to deploy the completed web-based tool on **Microsoft 
 
 > Register or log in <a href="https://azure.microsoft.com/en-us/free/search/?&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&OCID=AID2100049_SEM_Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&dclid=CjkKEQjwxNT8BRC0-4WyzuGUi5IBEiQATZzD3E5IQQApxjufn-ZaV9hVVK_WAVsEtvBT2t2vox1HY3vw_wcB" target="_blank">**Microsoft Azure**</a>,  a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.
 
-After log in , you can create a new resource for the web based tool and online database.
+After log in , you can create a new resource for the web-based tool and online database.
 
 ***Resource and Service creation***
 
