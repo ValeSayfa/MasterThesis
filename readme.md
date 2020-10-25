@@ -198,12 +198,28 @@ In this App service page, we can see various information such as URL, service st
 At the lift hand side of the page, we can see a list of options which are used for functionalities such as App configuration, Activity log, Access control and so on. Particularly, in "Settings - Configuration", the PHP version, HTML version, Platform and other applied techniques can be configured straightforwardly.
 
 ***App configuration page***
-![APPConfig](https://user-images.githubusercontent.com/29103893/97113968-05302180-16ee-11eb-9f3d-286828253933.png)
+![APPConfig](https://user-im
+
+In addition, in "Settings - MySQL In App", we can manage the online database, after turn the database service on, the database sql file can be imported into the online database. If we click "Manage" link on the top of the page, we can go to online *phpMyAdmin* portal. This portal is same as previous local one, and the import process is also same. We can refer to the previous section and complete the database import easily.githubusercontent.com/29103893/97113968-05302180-16ee-11eb-9f3d-286828253933.png)
 
 ***MySQL In App page***
-In addition, in "Settings - MySQL In App", we can manage the online database, after turn the database service on, the database sql file can be imported into the online database. If we click "Manage" link on the top of the page, we can go to online *phpMyAdmin* portal. This portal is same as previous local one, and the import process is also same. We can refer to the previous section and complete the database import easily.
-![APPMySQL](https://user-images.githubusercontent.com/29103893/97114393-90aab200-16f0-11eb-9495-20f4491eb54d.png)
+![APPMySQL](https://user-images.githubusercontent.com/29103893/97115498-4ed13a00-16f7-11eb-9270-b7ccd713010c.png)
 
+
+
+### Deployment STEP4
+
+> Import the App source code into container.
+
+After database is imported, we can import the web-based tool source code in to the container. By click "Development tools - Advanced Tools - Go", we come to *KUDU* environment. Here, we use the CMD debug console, because it is common and only simple command coded is required. Also, operations can be done graphically in directory system easily.
+
+***KUDU for deployment***
+![APPAdvTools](https://user-images.githubusercontent.com/29103893/97115516-5db7ec80-16f7-11eb-982c-3efa64138ac4.png)
+
+In *KUDU* environment, the web page files should be located at the "site/wwwroot" directory. There exists default APP code and should be deleted completely. After that, we can create a new App directory called "myapp", and the source code ZIP file can be dragged into the directory. The *KUDU* will automatically unzip and copy the source code files into this directory.
+
+***Code import in KUDU***
+![KUDUWWW](https://user-images.githubusercontent.com/29103893/97116847-534e2080-1700-11eb-8b4c-d7d6427b43e0.png)
 
 
 
@@ -223,53 +239,6 @@ In addition, in "Settings - MySQL In App", we can manage the online database, af
 ***Change Apache listening port***
 
 ![ApachePort](https://user-images.githubusercontent.com/29103893/89135035-8e3e1f00-d52a-11ea-880b-a9bff41f7ccb.png)
-
-**STEP3**
-
-> Import *"migration.sql"* schema and data into *MySQL*.
-
-The *"migration.sql"* is a database which contains a table called *"contribution"*. It includes both schema and data.
-
-The *XAMPP* contains *phpMyAdmin*, which is a free and open source administration tool for *MySQL*. You can click *"Admin"* button for *MySQL* module in *XAMPP Control Panel*, and use it with a web browser.
-
-***Open the phpMyAdmin window***
-
-![phpMyAdminWindow](https://user-images.githubusercontent.com/29103893/90280566-6aa0a000-de6b-11ea-9725-adc7bfa9ace5.png)
-
-In the *phpMyAdmin* page, first a new *"migration"* database should be created by clicking the *"New"* link on the left. Then, you can click the *"Import"* section, and choose the local *"migration.sql"* file to import the data table *"contributions"* into MySQL.
-
-***Create new migration database***
-
-![NewDatabase](https://user-images.githubusercontent.com/29103893/90281540-0aaaf900-de6d-11ea-90ca-666bb59b3240.png)
-
-***Import sql file to MySQL server***
-
-![TableInput](https://user-images.githubusercontent.com/29103893/90281643-37f7a700-de6d-11ea-9ae3-c7d929e62521.png)
-
-Specificly, the database allows a normal user (shown in the red box) to select data from the table. This is the only privilege assigned to the user, which is enough for the application and therefore can prevent data from unintended update. The developer can update, add or delete data using phpMyAdmin administration tool directly with a web browser, having the full privileges for operations.
-
-***User's privilege***
-
-![PrivilegeUser](https://user-images.githubusercontent.com/29103893/90281938-cb30dc80-de6d-11ea-99ff-d0b25ffd8e1a.png)
-
-If you want to add a new user, you can click *"Add user account"* link in *"Privileges"* section. Then you can set user name, host name, password and privileges you want to assign to the new user. The following picture is an example of the existing "user" for this web-based tool.
-
-***Add a new user***
-
-![AddUser](https://user-images.githubusercontent.com/29103893/90285060-6a0c0780-de73-11ea-9e3a-ec12c65b0dcf.png)
-
-***User's setting example***
-
-![userCreation](https://user-images.githubusercontent.com/29103893/90285065-6d06f800-de73-11ea-9ec1-c6e0b11ee751.png)
-
-**Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
-
-- The sql file is encoded witha different coding format.
-    - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with *phpMyAdmin* setting (Here *"utf8mb4_general_ci"* is used).
-
-
-
-
 
 
 
