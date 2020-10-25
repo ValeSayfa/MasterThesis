@@ -4,7 +4,7 @@
 
 > A web-based tool for assisting the developers to guide their architectural refactoring process based on specific scenarios.
 
-> Terms: micro-services, monolithic migration, architectural refactoring, web demo
+> Terms: micro-services, monolithic migration, architectural refactoring, web demo.
 
 
 ---
@@ -77,7 +77,7 @@ Finally, click *"Next"* button until the installation and configuration processe
 
 ### Installation STEP2
 
-> Start *Apache* and *MySQL* module in the *XAMPP Control Panel*
+> Start *Apache* and *MySQL* module in the *XAMPP Control Panel*.
 
 You can start the installed *XAMPP Control Panel* and you can see many action buttons for different modules. Here, we can start *Apache* and *MySQL* module by clicking *"Start"* button for each module.Then you can see the activated modules and their connecting ports.
 
@@ -147,7 +147,7 @@ If you want to add a new user, you can click *"Add user account"* link in *"Priv
 
 ### Installation STEP4
 
-> Put the project (repository) folder into *XAMPP* htdocs folder
+> Put the project (repository) folder into *XAMPP* htdocs folder.
 
 In order to make the code files runnable in local environment, the project (repository) folder should be places in *XAMPP* htdocs folder (Here *"C:\xampp\htdocs"*). *XAMPP* treat this folder as local host and its code file is accessible by web browser. Specifically, the *php* code as well as *HTML*, *Javascript* can be executed by web browser and they act as a web application locally, enabling us to test and use the web based tool early and intuitively.
 
@@ -161,12 +161,14 @@ In this section, a option to deploy the completed web-based tool on **Microsoft 
 
 
 ### Deployment STEP1
-> Register or log in <a href="https://azure.microsoft.com/en-us/free/search/?&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&OCID=AID2100049_SEM_Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&dclid=CjkKEQjwxNT8BRC0-4WyzuGUi5IBEiQATZzD3E5IQQApxjufn-ZaV9hVVK_WAVsEtvBT2t2vox1HY3vw_wcB" target="_blank">**Microsoft Azure**</a>
+> Register or log in <a href="https://azure.microsoft.com/en-us/free/search/?&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&OCID=AID2100049_SEM_Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&dclid=CjkKEQjwxNT8BRC0-4WyzuGUi5IBEiQATZzD3E5IQQApxjufn-ZaV9hVVK_WAVsEtvBT2t2vox1HY3vw_wcB" target="_blank">**Microsoft Azure**</a>.
 
 *Microsoft Azure* is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. After log in , you can create a new resource for the web-based tool and online database.
 
 
 ### Deployment STEP2
+
+> Create an App container and corresponding online MySQL database.
 
 In the *Microsoft Azure* Home Portal, we can click "Create a resource" in "Azure services". Then, we input "Web App + MySQL" in search bar and create a container that can be configured to support PHP and MYSQL.
 
@@ -176,7 +178,11 @@ Next, we can set the App name (here I named it "microservicewebbasedtool"), Subs
 
 ![ServicePlan](https://user-images.githubusercontent.com/29103893/97112445-a31eee80-16e4-11eb-813c-93fd1440f206.png)
 
-### STEP3 App Configuration and Database Migration***
+
+### Deployment STEP3
+
+>  Configure the App and migrate database.
+
 The created App resources are accessible via *Microsoft Azure* Home Portal in "Recent resources" section. If we click the corresponding App service "microservicewebbasedtool", a new page will be shown.
 
 ![AzureHome](https://user-images.githubusercontent.com/29103893/97110590-48809500-16da-11eb-8a86-0d132fab63b3.png)
@@ -186,17 +192,14 @@ The created App resources are accessible via *Microsoft Azure* Home Portal in "R
 ![AppPage](https://user-images.githubusercontent.com/29103893/97112980-a8316d00-16e7-11eb-88fc-da5be421cd50.png)
 
 
-Finally, click *"Next"* button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
-**STEP2**
 
-> Start *Apache* and *MySQL* module in the *XAMPP Control Panel*
 
-You can start the installed *XAMPP Control Panel* and you can see many action buttons for different modules. Here, we can start *Apache* and *MySQL* module by clicking *"Start"* button for each module.Then you can see the activated modules and their connecting ports.
 
-***XAMPP Control Panel***
 
-![XAMPP3](https://user-images.githubusercontent.com/29103893/89134659-f1c64d80-d526-11ea-8edc-2a4623d56a34.png)
+
+
+
 
 **If there are errors encountered during the starting process of *Apache*, the possible reasons may be as following:**
 
@@ -258,11 +261,6 @@ If you want to add a new user, you can click *"Add user account"* link in *"Priv
     - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with *phpMyAdmin* setting (Here *"utf8mb4_general_ci"* is used).
 
 
-**STEP4**
-
-> Put the project (repository) folder into *XAMPP* htdocs folder
-
-In order to make the code files runnable in local environment, the project (repository) folder should be places in *XAMPP* htdocs folder (Here *"C:\xampp\htdocs"*). *XAMPP* treat this folder as local host and its code file is accessable by web browser. Specificly, the *php* code as well as *HTML*, *Javascript* can be executed by web broswer and they act as a web application locally, enabling us to test and use the web based tool eaily and intuitively.
 
 
 
