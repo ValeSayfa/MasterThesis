@@ -156,46 +156,53 @@ In order to make the code files runnable in local environment, the project (repo
 
 ## Deployment on Microsoft Azure
 
-In this section, a option to deploy the completed web-based tool on **Microsoft Azure** will be illustrated, so that public users can have access to the tool and utilize the tool from external IP addresses.
+In this section, a option to deploy the completed web-based tool on *Microsoft Azure* will be illustrated, so that public users can have access to the tool and utilize the tool from external IP addresses.
 
 
 
 ### Deployment STEP1
-> Register or log in <a href="https://azure.microsoft.com/en-us/free/search/?&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&OCID=AID2100049_SEM_Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&dclid=CjkKEQjwxNT8BRC0-4WyzuGUi5IBEiQATZzD3E5IQQApxjufn-ZaV9hVVK_WAVsEtvBT2t2vox1HY3vw_wcB" target="_blank">**Microsoft Azure**</a>.
+> Register or log in <a href="https://azure.microsoft.com/en-us/free/search/?&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&OCID=AID2100049_SEM_Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&dclid=CjkKEQjwxNT8BRC0-4WyzuGUi5IBEiQATZzD3E5IQQApxjufn-ZaV9hVVK_WAVsEtvBT2t2vox1HY3vw_wcB" target="_blank">***Microsoft Azure***</a>.
 
 *Microsoft Azure* is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. After log in , you can create a new resource for the web-based tool and online database.
 
 
 ### Deployment STEP2
 
-> Create an App container and corresponding online MySQL database.
+> Create an App container and corresponding online *MySQL* database.
 
 In the *Microsoft Azure* Home Portal, we can click "Create a resource" in "Azure services". Then, we input "Web App + MySQL" in search bar and create a container that can be configured to support PHP and MYSQL.
 
+***Create new service***
 ![CreateService](https://user-images.githubusercontent.com/29103893/97111235-048f8f00-16de-11eb-8405-9180d2a253eb.png)
 
 Next, we can set the App name (here I named it "microservicewebbasedtool"), Subscription, Resource group, Service plan, Server location, and other settings to create a new App container. After the "Create" button is clicked, *Microsoft Azure* will start deployment process, which may last several minutes to deploy new resources. 
 
+***New service setting***
 ![ServicePlan](https://user-images.githubusercontent.com/29103893/97112445-a31eee80-16e4-11eb-813c-93fd1440f206.png)
 
 
 ### Deployment STEP3
 
->  Configure the App and migrate database.
+> Configure the App and migrate database.
 
-The created App resources are accessible via *Microsoft Azure* Home Portal in "Recent resources" section. If we click the corresponding App service "microservicewebbasedtool", a new page will be shown.
+The created App resources are accessible via *Microsoft Azure* Home Portal in "Recent resources" section. If we click the corresponding App service "microservicewebbasedtool", a new App service page will be shown.
 
+***Microsoft Azure Home Portal***
 ![AzureHome](https://user-images.githubusercontent.com/29103893/97110590-48809500-16da-11eb-8a86-0d132fab63b3.png)
 
+In this App service page, we can see various information such as URL, service status and so on.
 
-
+***App service page***
 ![AppPage](https://user-images.githubusercontent.com/29103893/97112980-a8316d00-16e7-11eb-88fc-da5be421cd50.png)
 
+At the lift hand side of the page, we can see a list of options which are used for functionalities such as App configuration, Activity log, Access control and so on. Particularly, in "Settings - Configuration", the PHP version, HTML version, Platform and other applied techniques can be configured straightforwardly.
 
+***App configuration page***
+![APPConfig](https://user-images.githubusercontent.com/29103893/97113968-05302180-16ee-11eb-9f3d-286828253933.png)
 
-
-
-
+***MySQL In App page***
+In addition, in "Settings - MySQL In App", we can manage the online database, after turn the database service on, the database sql file can be imported into the online database. If we click "Manage" link on the top of the page, we can go to online *phpMyAdmin* portal. This portal is same as previous local one, and the import process is also same. We can refer to the previous section and complete the database import easily.
+![APPMySQL](https://user-images.githubusercontent.com/29103893/97114393-90aab200-16f0-11eb-9495-20f4491eb54d.png)
 
 
 
