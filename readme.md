@@ -14,7 +14,7 @@
 - [Getting Started](#Getting-Started)
     - [Prerequisites](#Prerequisites)
 - [Installing on Local Machine](#Installing-on-Local-Machine)
-    - [STEP1](#STEP1)
+    - [XAMPP Download](#XAMPP-Download)
     - [STEP2](#STEP2)
     - [STEP3](#STEP3)
     - [STEP4](#STEP4)
@@ -53,7 +53,7 @@ In order to use and rest the web-based tool, the following prerequisites should 
 
 In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
 
-**STEP1**
+**XAMPP Download**
 
 > Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing *PHP* and *MySQL*.
 
@@ -168,6 +168,8 @@ In this section, a option to deploy the completed web-based tool on **Microsoft 
 
 After log in , you can create a new resource for the web-based tool and online database.
 
+
+**STEP2**
 ***Resource and Service creation***
 
 In the *Microsoft Azure* Home Portal, we can click "Create a resource" in "Azure services". Then, we input "Web App + MySQL" in search bar and create a container that can be configured to support PHP and MYSQL.
