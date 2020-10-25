@@ -242,8 +242,8 @@ By executing "ls" command, all files within the target directory will be listed,
 Finally, in the App overview page, the URL is available in the top right corner. We can copy and share this URL to other users, so they can visit this web-based tool by the URL externally. For instance, my public URL is <a href="https://microservicewebbasedtool.azurewebsites.net" target="_blank">**https://microservicewebbasedtool.azurewebsites.net**</a>
 
 ![APPOV](https://user-images.githubusercontent.com/29103893/97118939-500d6180-170d-11eb-8e0b-ea3084bc989a.png)
----
 
+---
 ## Running the web-based tool
 
 In this section, the introduction about the use of web-based tool is introduced.
