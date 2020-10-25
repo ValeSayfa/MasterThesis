@@ -218,18 +218,26 @@ After database is imported, we can import the web-based tool source code in to t
 ***KUDU for deployment***
 ![APPAdvTools](https://user-images.githubusercontent.com/29103893/97115516-5db7ec80-16f7-11eb-982c-3efa64138ac4.png)
 
-In *KUDU* environment, the web page files should be located at the "site/wwwroot" directory. There exists default APP code and should be deleted completely. After that, we can create a new App directory called "myapp", and the source code ZIP file can be dragged into the directory. The *KUDU* will automatically unzip and copy the source code files into this directory.
+In *KUDU* environment, the web page files should be located at the "home\site\wwwroot" directory. There exists default APP code and should be deleted completely. After that, we can create a new App directory called "myapp", and the source code ZIP file can be dragged into the directory. The *KUDU* will automatically unzip and copy the source code files into this directory.
 
 ***Code import in KUDU***
 ![KUDUWWW](https://user-images.githubusercontent.com/29103893/97117203-66fa8680-1702-11eb-9919-313f3bc0d031.png)
 
 ### Deployment STEP5
 
->Configure MySQL database configuration and adapt App code.
+>Configure *MySQL* database configuration and adapt App code.
 
+The code and database, which are developed in local environment, should be adapted so that they can fit the online environment. In this step, we will use the console with command code. First, we start in "home\data\mysql" directory, and the code example is given as following:
 
+```
+D:\home\data\mysql>ls
+D:\home\data\mysql>type MYSQLCONNSTR_localdb.txt
+```
 
+By executing "ls" command, all files within the target directory will be listed, and we use "type"command to dump the content of "MYSQLCONNSTR_localdb.txt", and the information about database connection, such as server name, database name, user name, and password will be printed out in the console. Then, for each source code file which uses methods for database connection, their parameters should be changed according to these information. In our project, the "search.php" and "result.php" should be changed. This can be done in directory system by clicking the edit icon and changing the source code online.
 
+***Online database connection parameter change***
+![APPEdit](https://user-images.githubusercontent.com/29103893/97118767-3e778a00-170c-11eb-9c65-02591e240414.png)
 
 **If there are errors encountered during the starting process of *Apache*, the possible reasons may be as following:**
 
