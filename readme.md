@@ -53,7 +53,7 @@ In order to use and rest the web-based tool, the following prerequisites should 
 
 In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
 
-**XAMPP Download**
+### XAMPP Download
 
 > Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing *PHP* and *MySQL*.
 
