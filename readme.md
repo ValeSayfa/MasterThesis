@@ -172,8 +172,11 @@ After log in , you can create a new resource for the web-based tool and online d
 
 ![AzureHome](https://user-images.githubusercontent.com/29103893/97110590-48809500-16da-11eb-8a86-0d132fab63b3.png)
 
+In the *Microsoft Azure* Home Portal, we can click "Create a resource" in "Azure services". Then, we input "Web App + MySQL" in search bar and create a container that can be configured to support PHP and MYSQL.
 
-Then, a installation folder is selected, and it is recommand to use the default folder in system disk to avoid user authorization problems in the future.
+![CreateService](https://user-images.githubusercontent.com/29103893/97111235-048f8f00-16de-11eb-8405-9180d2a253eb.png)
+
+
 
 ***Select installation folder for XAMPP***
 
