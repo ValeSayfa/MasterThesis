@@ -14,10 +14,10 @@
 - [Getting Started](#Getting-Started)
     - [Prerequisites](#Prerequisites)
 - [Installing on Local Machine](#Installing-on-Local-Machine)
-    - [STEP1 XAMPP Download](#STEP1-XAMPP-Download)
-    - [STEP2 Start Apache and MySQL Module](#STEP2-Start-Apache-and-MySQL-Module)
-    - [STEP3 Import Database](#STEP3-Import-Database)
-    - [STEP4 Project (Repository) Folder Creation](#STEP4-Project-(Repository)-Folder-Creation)
+    - [Installation STEP1](#Installation-STEP1)
+    - [Installation STEP2](#Installation-STEP2)
+    - [Installation STEP3](#Installation-STEP3)
+    - [Installation STEP4](#Installation-STEP4)
 - [Deployment on Microsoft Azure](#Deployment-on-Microsoft-Azure)
     - [STEP1](#STEP1)
     - [STEP2](#STEP2)
@@ -53,7 +53,7 @@ In order to use and rest the web-based tool, the following prerequisites should 
 
 In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
 
-### STEP1 XAMPP Download
+### Installation STEP1
 
 > Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing *PHP* and *MySQL*.
 
@@ -75,7 +75,7 @@ Then, a installation folder is selected, and it is recommended to use the defaul
 
 Finally, click *"Next"* button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
-### STEP2 Start Apache and MySQL Module
+### Installation STEP2
 
 > Start *Apache* and *MySQL* module in the *XAMPP Control Panel*
 
@@ -101,7 +101,7 @@ You can start the installed *XAMPP Control Panel* and you can see many action bu
 
 ![ApachePort](https://user-images.githubusercontent.com/29103893/89135035-8e3e1f00-d52a-11ea-880b-a9bff41f7ccb.png)
 
-### STEP3 Import Database
+### Installation STEP3
 
 > Import *"migration.sql"* schema and data into *MySQL*.
 
@@ -145,7 +145,7 @@ If you want to add a new user, you can click *"Add user account"* link in *"Priv
     - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with *phpMyAdmin* setting (Here *"utf8mb4_general_ci"* is used).
 
 
-### STEP4 Project (Repository) Folder Creation
+### Installation STEP4
 
 > Put the project (repository) folder into *XAMPP* htdocs folder
 
@@ -156,21 +156,17 @@ In order to make the code files runnable in local environment, the project (repo
 
 ## Deployment on Microsoft Azure
 
-
-
-
 In this section, a option to deploy the completed web-based tool on **Microsoft Azure** will be illustrated, so that public users can have access to the tool and utilize the tool from external IP addresses.
 
 
-**STEP1**
 
-> Register or log in <a href="https://azure.microsoft.com/en-us/free/search/?&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&OCID=AID2100049_SEM_Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&dclid=CjkKEQjwxNT8BRC0-4WyzuGUi5IBEiQATZzD3E5IQQApxjufn-ZaV9hVVK_WAVsEtvBT2t2vox1HY3vw_wcB" target="_blank">**Microsoft Azure**</a>,  a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers.
+### Deployment STEP1
+> Register or log in <a href="https://azure.microsoft.com/en-us/free/search/?&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&OCID=AID2100049_SEM_Cj0KCQjwxNT8BRD9ARIsAJ8S5xbss_NUxJHK8EUnkeL3LcrYXqK_bsDu1WmdTAUfCWEmSrGS9dyZSu8aAum6EALw_wcB:G:s&dclid=CjkKEQjwxNT8BRC0-4WyzuGUi5IBEiQATZzD3E5IQQApxjufn-ZaV9hVVK_WAVsEtvBT2t2vox1HY3vw_wcB" target="_blank">**Microsoft Azure**</a>
 
-After log in , you can create a new resource for the web-based tool and online database.
+*Microsoft Azure* is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. After log in , you can create a new resource for the web-based tool and online database.
 
 
-**STEP2**
-***Resource and Service creation***
+### Deployment STEP2
 
 In the *Microsoft Azure* Home Portal, we can click "Create a resource" in "Azure services". Then, we input "Web App + MySQL" in search bar and create a container that can be configured to support PHP and MYSQL.
 
@@ -180,7 +176,7 @@ Next, we can set the App name (here I named it "microservicewebbasedtool"), Subs
 
 ![ServicePlan](https://user-images.githubusercontent.com/29103893/97112445-a31eee80-16e4-11eb-813c-93fd1440f206.png)
 
-***App Configuration and Database Migration***
+### STEP3 App Configuration and Database Migration***
 The created App resources are accessible via *Microsoft Azure* Home Portal in "Recent resources" section. If we click the corresponding App service "microservicewebbasedtool", a new page will be shown.
 
 ![AzureHome](https://user-images.githubusercontent.com/29103893/97110590-48809500-16da-11eb-8a86-0d132fab63b3.png)
