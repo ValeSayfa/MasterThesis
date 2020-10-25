@@ -221,7 +221,12 @@ After database is imported, we can import the web-based tool source code in to t
 In *KUDU* environment, the web page files should be located at the "site/wwwroot" directory. There exists default APP code and should be deleted completely. After that, we can create a new App directory called "myapp", and the source code ZIP file can be dragged into the directory. The *KUDU* will automatically unzip and copy the source code files into this directory.
 
 ***Code import in KUDU***
-![KUDUWWW](https://user-images.githubusercontent.com/29103893/97116847-534e2080-1700-11eb-8b4c-d7d6427b43e0.png)
+![KUDUWWW](https://user-images.githubusercontent.com/29103893/97117203-66fa8680-1702-11eb-9919-313f3bc0d031.png)
+
+### Deployment STEP5
+
+>Configure MySQL database configuration and adapt App code.
+
 
 
 
