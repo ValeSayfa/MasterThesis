@@ -237,26 +237,11 @@ D:\home\data\mysql>type MYSQLCONNSTR_localdb.txt
 By executing "ls" command, all files within the target directory will be listed, and we use "type"command to dump the content of "MYSQLCONNSTR_localdb.txt", and the information about database connection, such as server name, database name, user name, and password will be printed out in the console. Then, for each source code file which uses methods for database connection, their parameters should be changed according to these information. In our project, the "search.php" and "result.php" should be changed. This can be done in directory system by clicking the edit icon and changing the source code online.
 
 ***Online database connection parameter change***
-![APPEdit](https://user-images.githubusercontent.com/29103893/97118767-3e778a00-170c-11eb-9c65-02591e240414.png)
+![APPEdit](https://user-images.githubusercontent.com/29103893/97118797-78489080-170c-11eb-9c43-d2a6c9138537.png)
 
-**If there are errors encountered during the starting process of *Apache*, the possible reasons may be as following:**
+Finally, in the App overview page, the URL is available in the top right corner. We can copy and share this URL to other users, so they can visit this web-based tool by the URL externally. For instance, my public URL is <a href="https://microservicewebbasedtool.azurewebsites.net" target="_blank">**https://microservicewebbasedtool.azurewebsites.net**</a>
 
-1. The service is not yet started.
-    - Solution: Run *"Services"* as administrator on Windows, find *Apache* (Here *"Apache2.4"*) and click *"Start"* to start the service.
-
-***Start Apache service***
-
-![Service](https://user-images.githubusercontent.com/29103893/89134839-a319b300-d528-11ea-877e-c59e7d99f111.png)
-
-2. The port is occupied by other applications.
-    - Solution: Click *"Config"* button for *Apache* module, select *"Apache (httpd.conf)"* file and open with Notepad. Next, search *"Listen"* in the file, and you can change the port to another free port and avoid conflict.
-
-***Change Apache listening port***
-
-![ApachePort](https://user-images.githubusercontent.com/29103893/89135035-8e3e1f00-d52a-11ea-880b-a9bff41f7ccb.png)
-
-
-
+![APPOV](https://user-images.githubusercontent.com/29103893/97118939-500d6180-170d-11eb-8e0b-ea3084bc989a.png)
 ---
 
 ## Running the web-based tool
@@ -268,11 +253,17 @@ The web-based tool enable users to select different properties and search for gu
 
 ### Open the Index Page
 
-First, open the web browser (e.g. Chrome) and input the following URL:
+First, open the web browser (e.g. Chrome) and input the public URL
+```
+https://microservicewebbasedtool.azurewebsites.net
+```
+
+or input the following local URL:
 
 ```
 http://localhost/MasterThesis/index.php
 ```
+
 As mentioned before, *"localhost"* indicates *"C:\xampp\htdocs"*, and *"MasterThesis"* here is the project (repository) name, while *"index.php"* is the php file containing scripts and html page, which should be run as a web page in the web browser.
 
 ***Index page***
