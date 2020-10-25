@@ -14,10 +14,10 @@
 - [Getting Started](#Getting-Started)
     - [Prerequisites](#Prerequisites)
 - [Installing on Local Machine](#Installing-on-Local-Machine)
-    - [XAMPP Download](#XAMPP-Download)
-    - [STEP2](#STEP2)
-    - [STEP3](#STEP3)
-    - [STEP4](#STEP4)
+    - [STEP1 XAMPP Download](#STEP1-XAMPP-Download)
+    - [STEP2 Start Apache and MySQL Module](#STEP2-Start-Apache-and-MySQL-Module)
+    - [STEP3 Import Database](#STEP3-Import-Database)
+    - [STEP4 Project (Repository) Folder Creation](#STEP4-Project-(Repository)-Folder-Creation)
 - [Deployment on Microsoft Azure](#Deployment-on-Microsoft-Azure)
     - [STEP1](#STEP1)
     - [STEP2](#STEP2)
@@ -53,7 +53,7 @@ In order to use and rest the web-based tool, the following prerequisites should 
 
 In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
 
-### XAMPP Download
+### STEP1 XAMPP Download
 
 > Download <a href="https://www.apachefriends.org/index.html/" target="_blank">**XAMPP**</a> for Windows, a free and easy to install Apache distribution containing *PHP* and *MySQL*.
 
@@ -75,7 +75,7 @@ Then, a installation folder is selected, and it is recommended to use the defaul
 
 Finally, click *"Next"* button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
-**STEP2**
+### STEP2 Start Apache and MySQL Module
 
 > Start *Apache* and *MySQL* module in the *XAMPP Control Panel*
 
@@ -101,7 +101,7 @@ You can start the installed *XAMPP Control Panel* and you can see many action bu
 
 ![ApachePort](https://user-images.githubusercontent.com/29103893/89135035-8e3e1f00-d52a-11ea-880b-a9bff41f7ccb.png)
 
-**STEP3**
+### STEP3 Import Database
 
 > Import *"migration.sql"* schema and data into *MySQL*.
 
@@ -141,11 +141,11 @@ If you want to add a new user, you can click *"Add user account"* link in *"Priv
 
 **Coding capability error may encountered during the import process of *phpMyAdmin*, the possible reasons may be:**
 
-- The sql file is encoded witha different coding format.
+- The sql file is encoded with a different coding format.
     - Solution: Open the sql file with Notepad, and save it as another coding format which is consistent with *phpMyAdmin* setting (Here *"utf8mb4_general_ci"* is used).
 
 
-**STEP4**
+### STEP4 Project (Repository) Folder Creation
 
 > Put the project (repository) folder into *XAMPP* htdocs folder
 
