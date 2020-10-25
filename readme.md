@@ -170,17 +170,23 @@ After log in , you can create a new resource for the web-based tool and online d
 
 ***Resource and Service creation***
 
-![AzureHome](https://user-images.githubusercontent.com/29103893/97110590-48809500-16da-11eb-8a86-0d132fab63b3.png)
-
 In the *Microsoft Azure* Home Portal, we can click "Create a resource" in "Azure services". Then, we input "Web App + MySQL" in search bar and create a container that can be configured to support PHP and MYSQL.
 
 ![CreateService](https://user-images.githubusercontent.com/29103893/97111235-048f8f00-16de-11eb-8405-9180d2a253eb.png)
 
+Next, we can set the App name (here I named it "microservicewebbasedtool"), Subscription, Resource group, Service plan, Server location, and other settings to create a new App container. After the "Create" button is clicked, *Microsoft Azure* will start deployment process, which may last several minutes to deploy new resources. 
+
+![ServicePlan](https://user-images.githubusercontent.com/29103893/97112445-a31eee80-16e4-11eb-813c-93fd1440f206.png)
+
+***App Configuration and Database Migration***
+The created App resources are accessible via *Microsoft Azure* Home Portal in "Recent resources" section. If we click the corresponding App service "microservicewebbasedtool", a new page will be shown.
+
+![AzureHome](https://user-images.githubusercontent.com/29103893/97110590-48809500-16da-11eb-8a86-0d132fab63b3.png)
 
 
-***Select installation folder for XAMPP***
 
-![XAMPP2](https://user-images.githubusercontent.com/29103893/89133653-ede1fd80-d51d-11ea-82ec-4e74126cbaa8.png)
+![AppPage](https://user-images.githubusercontent.com/29103893/97112980-a8316d00-16e7-11eb-88fc-da5be421cd50.png)
+
 
 Finally, click *"Next"* button until the installation and configuration processes are finished. And the running environment is successfully set up.
 
