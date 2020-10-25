@@ -51,6 +51,8 @@ In order to use and rest the web-based tool, the following prerequisites should 
 - Apache HTTP Server
 
 
+---
+
 ## Installing on Local Machine
 
 In this section, a step by step series of process will show you how to set up a development and running environment to use the web-based tool.
@@ -154,7 +156,7 @@ If you want to add a new user, you can click *"Add user account"* link in *"Priv
 In order to make the code files runnable in local environment, the project (repository) folder should be places in *XAMPP* htdocs folder (Here *"C:\xampp\htdocs"*). *XAMPP* treat this folder as local host and its code file is accessible by web browser. Specifically, the *php* code as well as *HTML*, *Javascript* can be executed by web browser and they act as a web application locally, enabling us to test and use the web based tool early and intuitively.
 
 
-
+---
 
 ## Deployment on Microsoft Azure
 
@@ -244,6 +246,7 @@ Finally, in the App overview page, the URL is available in the top right corner.
 ![APPOV](https://user-images.githubusercontent.com/29103893/97118939-500d6180-170d-11eb-8e0b-ea3084bc989a.png)
 
 ---
+
 ## Running the web-based tool
 
 In this section, the introduction about the use of web-based tool is introduced.
