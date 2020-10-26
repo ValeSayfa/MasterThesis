@@ -201,7 +201,8 @@ In this App service page, we can see various information such as URL, service st
 At the lift hand side of the page, we can see a list of options which are used for functionalities such as App configuration, Activity log, Access control and so on. Particularly, in "Settings - Configuration", the PHP version, HTML version, Platform and other applied techniques can be configured straightforwardly.
 
 ***App configuration page***
-![APPConfig](https://user-im
+![APPConfig](https://user-images.githubusercontent.com/29103893/97175563-fdc35380-1793-11eb-8e32-c910105508fd.png)
+
 
 In addition, in "Settings - MySQL In App", we can manage the online database, after turn the database service on, the database sql file can be imported into the online database. If we click "Manage" link on the top of the page, we can go to online *phpMyAdmin* portal. This portal is same as previous local one, and the import process is also same. We can refer to the previous section and complete the database import easily.githubusercontent.com/29103893/97113968-05302180-16ee-11eb-9f3d-286828253933.png)
 
