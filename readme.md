@@ -204,7 +204,7 @@ At the lift hand side of the page, we can see a list of options which are used f
 ![APPConfig](https://user-images.githubusercontent.com/29103893/97175563-fdc35380-1793-11eb-8e32-c910105508fd.png)
 
 
-In addition, in "Settings - MySQL In App", we can manage the online database, after turn the database service on, the database sql file can be imported into the online database. If we click "Manage" link on the top of the page, we can go to online *phpMyAdmin* portal. This portal is same as previous local one, and the import process is also same. We can refer to the previous section and complete the database import easily.githubusercontent.com/29103893/97113968-05302180-16ee-11eb-9f3d-286828253933.png)
+In addition, in "Settings - MySQL In App", we can manage the online database, after turn the database service on, the database sql file can be imported into the online database. If we click "Manage" link on the top of the page, we can go to online *phpMyAdmin* portal. This portal is same as previous local one, and the import process is also same. We can refer to the previous section and complete the database import easily.
 
 ***MySQL In App page***
 ![APPMySQL](https://user-images.githubusercontent.com/29103893/97115498-4ed13a00-16f7-11eb-9270-b7ccd713010c.png)
